@@ -1,0 +1,14 @@
+1. in c code, declear struct pointer, if need add 'struct' keywork
+
+typedef struct {
+    int val;
+    struct MyLinkedList* next;
+} MyLinkedList;
+
+/** Initialize your data structure here. */
+
+MyLinkedList* myLinkedListCreate() {
+    MyLinkedList* new = NULL;
+    OR
+    Struct MyLinkedList* new = NULL;
+}

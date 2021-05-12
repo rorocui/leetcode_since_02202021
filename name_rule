@@ -1,0 +1,14 @@
+Ver: 20210426
+
+typedef struct 
+{
+    int* que;
+} MyCQue;
+
+MyCQue* circularQueueCreate(int k) 
+{
+}
+
+int target_num = -1;
+
+#define SQUARE_MAX 100

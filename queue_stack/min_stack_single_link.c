@@ -6,21 +6,9 @@ typedef struct {
 MyLinkedList* myLinkedListCreate() {
     MyLinkedList* new = NULL;
     new = (MyLinkedList*)malloc(sizeof(MyLinkedList));
-    new->val = -1;
+    new->val = 0x7FFFFFFF;
     new->next = NULL;
     return new; 
-}
-
-/** Add a node of value val before the first element of the linked list. 
- * After the insertion, the new node will be the first node of the linked list. */
-void myLinkedListAddAtHead(MyLinkedList* obj, int val) {    
-    MyLinkedList* head = NULL;
-    
-    head = myLinkedListCreate();
-    head->val = obj->val;
-    head->next = obj->next;
-    obj->val = val;
-    obj->next = head;    
 }
 
 /** Append a node of value val to the last element of the linked list. */
@@ -28,61 +16,40 @@ void myLinkedListAddAtTail(MyLinkedList* obj, int val) {
     MyLinkedList* end = NULL;
     MyLinkedList* ptr = NULL;
     
-    if(obj)
+    //printf("%s:0x%lx,0x%lx\n", __func__, obj, obj->next);
+    
+    end = myLinkedListCreate();
+    if(obj->next)
     {
-        end = myLinkedListCreate();
-        end->val = val;
-        end->next = NULL;
         ptr = obj;
         while(ptr->next)
         {
             ptr = ptr->next;    
         }
         ptr->next = end;
+        ptr->val = val;
     }
     else
     {
         obj->val = val;
+        obj->next = end;
         
     }
-}
-
-/** Add a node of value val before the index-th node in the linked list. 
- * If index equals to the length of linked list, the node will be appended to the end of linked list. 
- * If index is greater than the length, the node will not be inserted. */
-void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) {
-    MyLinkedList* ptr = NULL;
-    MyLinkedList* new = NULL;
-    int i;
-    if( index == 0 )
-            myLinkedListAddAtHead(obj, val);
-    else
+    
+    /*debug only*/
+    /*
+    ptr = obj;
+    printf("link list(0x%lx):", obj);
+    while(ptr)
     {
-        new = myLinkedListCreate();
-        new->val = val;
-        if(obj)
-        {
-            ptr = obj;
-            for(i = 0; i < index - 1;)
-            {
-                if(ptr->next)
-                {
-                    ptr = ptr->next;
-                    i++;
-                }
-                else
-                    break;
-            }
-            printf("i=%d\n", i);
-            if(i == index - 1)
-            {
-                if(ptr->next) new->next = ptr->next;
-                ptr->next = new;
-            } 
-        }
+        printf("%d |", ptr->val);
+        ptr = ptr->next;
     }
+    printf("\n");
+    */
     
 }
+
 
 /** Delete the index-th node in the linked list, if the index is valid. */
 void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
@@ -172,15 +139,15 @@ void myLinkedListFree(MyLinkedList* obj) {
 typedef struct {
     MyLinkedList *list;
     int currentSize;
-} MyStack;
+} MinStack;
 
 /** Initialize your data structure here. */
 
-MyStack* myStackCreate() {
+MinStack* minStackCreate() {
     //printf("%s\n", __func__);
-    MyStack *new = NULL;
+    MinStack *new = NULL;
     
-    new = (MyStack*)malloc(sizeof(MyStack));
+    new = (MinStack*)malloc(sizeof(MinStack));
 
     new->list = myLinkedListCreate();
     new->currentSize = 0;
@@ -189,20 +156,20 @@ MyStack* myStackCreate() {
 }
 
 /** Push element x onto stack. */
-void myStackPush(MyStack* obj, int x) {
+void minStackPush(MinStack* obj, int x) {
 
     myLinkedListAddAtTail(obj->list, x);
     obj->currentSize++;
 }
 
 /** Removes the element on top of the stack and returns that element. */
-int myStackPop(MyStack* obj) {
+int minStackPop(MinStack* obj) {
     int ret = 0;
 
     if(obj->currentSize > 0)
     {
-        ret = myLinkedListGet(obj->list, obj->currentSize);
-        myLinkedListDeleteAtIndex(obj->list, obj->currentSize);
+        ret = myLinkedListGet(obj->list, obj->currentSize - 1);
+        myLinkedListDeleteAtIndex(obj->list, obj->currentSize - 1);
         obj->currentSize--;
         return ret;
     }
@@ -215,22 +182,35 @@ int myStackPop(MyStack* obj) {
 }
 
 /** Get the top element. */
-int myStackTop(MyStack* obj) {
+int minStackTop(MinStack* obj) {
     
-    return myLinkedListGet(obj->list, obj->currentSize);
+    return myLinkedListGet(obj->list, obj->currentSize - 1);
+}
+
+int minStackGetMin(MinStack* obj) {
+    int min = 0x7FFFFFFF;
+    MyLinkedList* new = obj->list;
+    
+    while(new)
+    {
+        min = (min < new->val) ? min : new->val;
+        if(new->next) new = new->next;
+        else break;
+    }
+
+    return min;
 }
 
 /** Returns whether the stack is empty. */
-bool myStackEmpty(MyStack* obj) {
+bool minStackEmpty(MinStack* obj) {
     if(obj->currentSize > 0)
         return false;
     else
         return true;
 }
 
-void myStackFree(MyStack* obj) {
+void minStackFree(MinStack* obj) {
     if(obj->list) myLinkedListFree(obj->list);
     free(obj);
 }
-
-/* 16 test cases in 0ms, 6.2MB(<24%) on May 15th, 2021 */
+/* 31 test cases in 364ms(<9%) in 12.8MB, on May 16th, 2021 */

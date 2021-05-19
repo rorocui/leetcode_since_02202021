@@ -1,236 +1,80 @@
 typedef struct {
-    int val;
-    struct MyLinkedList* next;   
-} MyLinkedList;
+    int* que;
+    int  maxSize;
+    int  front;
+    int  rear;
+    int  currentSize;
+} MyCQue;
 
-MyLinkedList* myLinkedListCreate() {
-    MyLinkedList* new = NULL;
-    new = (MyLinkedList*)malloc(sizeof(MyLinkedList));
-    new->val = -1;
-    new->next = NULL;
-    return new; 
+
+MyCQue* myCQueCreate(int k) {
+    MyCQue* obj = (MyCQue*)malloc(sizeof(MyCQue));
+    obj->que = (int*)malloc(sizeof(int) * k);
+    obj->maxSize = k;
+    obj->front = obj->rear = -1;
+    obj->currentSize = 0;
+    
+    //printf("%s:%lx-%d\n", __func__, &obj, k);
+    return obj;
 }
 
-/** Add a node of value val before the first element of the linked list. 
- * After the insertion, the new node will be the first node of the linked list. */
-void myLinkedListAddAtHead(MyLinkedList* obj, int val) {    
-    MyLinkedList* head = NULL;
-    
-    head = myLinkedListCreate();
-    head->val = obj->val;
-    head->next = obj->next;
-    obj->val = val;
-    obj->next = head;    
-}
-
-/** Append a node of value val to the last element of the linked list. */
-void myLinkedListAddAtTail(MyLinkedList* obj, int val) {
-    MyLinkedList* end = NULL;
-    MyLinkedList* ptr = NULL;
-    
-    if(obj)
+bool myCQueEnQue(MyCQue* obj, int value) {
+    //if(value == 202) printf("%s:%lx-%d\n", __func__, &obj, value);
+    if(obj->currentSize == obj->maxSize)
     {
-        end = myLinkedListCreate();
-        end->val = val;
-        end->next = NULL;
-        ptr = obj;
-        while(ptr->next)
-        {
-            ptr = ptr->next;    
-        }
-        ptr->next = end;
+        printf("no enough space in Queue for insert request, max=%d\n", obj->maxSize);
+        return false;
     }
-    else
-    {
-        obj->val = val;
-        
-    }
-}
+    /* if empty, need front++ */
+    if(obj->currentSize == 0) obj->front++;
 
-/** Add a node of value val before the index-th node in the linked list. 
- * If index equals to the length of linked list, the node will be appended to the end of linked list. 
- * If index is greater than the length, the node will not be inserted. */
-void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) {
-    MyLinkedList* ptr = NULL;
-    MyLinkedList* new = NULL;
-    int i;
-    if( index == 0 )
-            myLinkedListAddAtHead(obj, val);
-    else
-    {
-        new = myLinkedListCreate();
-        new->val = val;
-        if(obj)
-        {
-            ptr = obj;
-            for(i = 0; i < index - 1;)
-            {
-                if(ptr->next)
-                {
-                    ptr = ptr->next;
-                    i++;
-                }
-                else
-                    break;
-            }
-            printf("i=%d\n", i);
-            if(i == index - 1)
-            {
-                if(ptr->next) new->next = ptr->next;
-                ptr->next = new;
-            } 
-        }
-    }
-    
-}
-
-/** Delete the index-th node in the linked list, if the index is valid. */
-void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
-    MyLinkedList* ptr = NULL;
-    MyLinkedList* temp = NULL;
-    int i;
-    
-    if(obj)
-    {
-        if(index > 0)
-        {
-            ptr = obj;
-            for(i = 0; i < index - 1;)
-            {
-                if(ptr->next)
-                {
-                    ptr = ptr->next;
-                    i++;
-                }
-                else
-                    break;
-            }
-            if(i == index - 1)
-            {
-                if(ptr->next)
-                {
-                    temp = ptr->next;
-                    ptr->next = temp->next;
-                }
-                free(temp);
-            }
-        }
-        else
-        {
-            ptr = obj->next;
-            obj->next = ptr->next;
-            obj->val = ptr->val;
-        }
-    }
-  
-}
-
-/** Get the value of the index-th node in the linked list. 
- * If the index is invalid, return -1. */
-int myLinkedListGet(MyLinkedList* obj, int index) {
-    MyLinkedList* ptr = NULL;
-    int i;
-    
-    if(obj)
-        ptr = obj;
-    else
-        return -1;
-    for(i = 0; i < index;)
-    {
-        if(ptr->next)
-        {
-            ptr = ptr->next;
-            i++;
-        }
-        else
-            break;
-    }
-    if(i == index && ptr)
-    {
-        return ptr->val;
-    }
-    else
-    {
-        return -1;   
-    }
-}
-
-void myLinkedListFree(MyLinkedList* obj) {
-    MyLinkedList* ptr = NULL;
-    
-    while(obj->next)
-    {
-        ptr = obj->next;
-        free(obj);
-        obj = ptr;
-    }
-    free(obj);
-    
-}
-
-
-typedef struct {
-    MyLinkedList *list;
-    int currentSize;
-} MyStack;
-
-/** Initialize your data structure here. */
-
-MyStack* myStackCreate() {
-    //printf("%s\n", __func__);
-    MyStack *new = NULL;
-    
-    new = (MyStack*)malloc(sizeof(MyStack));
-
-    new->list = myLinkedListCreate();
-    new->currentSize = 0;
-
-    return new;
-}
-
-/** Push element x onto stack. */
-void myStackPush(MyStack* obj, int x) {
-
-    myLinkedListAddAtTail(obj->list, x);
+    if((++obj->rear) > (obj->maxSize - 1)) obj->rear = 0;
+    //printf("%d-%d\n", obj->front, obj->rear);
+    *(obj->que + obj->rear) = value;
     obj->currentSize++;
+    
+    //printf("EnQ:%d\n", obj->currentSize); 
+    return true;
 }
 
-/** Removes the element on top of the stack and returns that element. */
-int myStackPop(MyStack* obj) {
+int myCQueDeQue(MyCQue* obj) {
+    //printf("%s:%lx-%d\n", __func__, obj, obj->currentSize);
     int ret = 0;
 
-    if(obj->currentSize > 0)
-    {
-        ret = myLinkedListGet(obj->list, obj->currentSize);
-        myLinkedListDeleteAtIndex(obj->list, obj->currentSize);
-        obj->currentSize--;
-        return ret;
-    }
-    else
-    {
-        printf("Can't pop on empty stack \n");
-        return -1;
-    }
+    if(!obj->currentSize) return -1;
 
-}
-
-/** Get the top element. */
-int myStackTop(MyStack* obj) {
+    //printf("b:ret=%d\n", ret);
+    //printf("b:%d-%d\n", obj->front, obj->rear);
+    ret = *(obj->que + obj->front);
+    //printf("a:ret=%d\n", ret);
+    if((++obj->front) > (obj->maxSize - 1)) obj->front = 0;
+    obj->currentSize--;
     
-    return myLinkedListGet(obj->list, obj->currentSize);
+    if(obj->currentSize == 0) obj->front = obj->rear = -1;
+    //printf("a:%d-%d\n", obj->front, obj->rear);
+    
+    //if(ret == 202) printf("done:ret=%d\n", ret);
+    //printf("DeQ:%d\n", obj->currentSize); 
+    return ret; 
 }
 
-/** Returns whether the stack is empty. */
-bool myStackEmpty(MyStack* obj) {
-    if(obj->currentSize > 0)
+bool myCQueIsEmpty(MyCQue* obj) {
+    //printf("%s:%d\n", __func__, obj->currentSize);
+    //printf("%d\n", obj->currentSize); 
+    if(obj->currentSize)
         return false;
     else
         return true;
 }
 
-void myStackFree(MyStack* obj) {
-    if(obj->list) myLinkedListFree(obj->list);
-    free(obj);
+bool myCQueIsFull(MyCQue* obj) {
+    if(obj->currentSize == obj->maxSize)
+        return true;
+    else
+        return false;
 }
 
-/* 16 test cases in 0ms, 6.2MB(<24%) on May 15th, 2021 */
+void myCQueFree(MyCQue* obj) {
+    if(obj->que) free(obj->que);
+    if(obj) free(obj);
+}

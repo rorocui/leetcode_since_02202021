@@ -1,4 +1,3 @@
-
 typedef struct {
     int val;
     struct MyLinkedList* next;
@@ -132,18 +131,61 @@ void myLinkedListFree(MyLinkedList* obj) {
 
 }
 
-/* 16 test cases in 0ms, 6.2MB(<25%) on May 16th, 2021 */
+typedef struct {
+    MyLinkedList* que;
+    int  currentSize;
+} MyCQue;
 
-/**
- * Your MyStack struct will be instantiated and called as such:
- * MyStack* obj = myStackCreate();
- * myStackPush(obj, x);
- 
- * int param_2 = myStackPop(obj);
- 
- * int param_3 = myStackTop(obj);
- 
- * bool param_4 = myStackEmpty(obj);
- 
- * myStackFree(obj);
-*/
+
+MyCQue* myCQueCreate() {
+    MyCQue* obj = (MyCQue*)malloc(sizeof(MyCQue));
+    obj->que = myLinkedListCreate();
+    obj->currentSize = 0;
+    
+    return obj;
+}
+
+bool myCQueEnQue(MyCQue* obj, int value) {
+    myLinkedListAddAtTail(obj->que, value);
+    obj->currentSize++;
+    return true;
+}
+
+int myCQueDeQue(MyCQue* obj) {
+    int ret = 0;
+
+    if(obj->currentSize > 0)
+    {
+        obj->currentSize--;
+        ret = myLinkedListGet(obj->que, 0);
+        myLinkedListDeleteAtIndex(obj->que, 0);
+        return ret;
+    }
+    else
+    {
+        printf(" Empty queue, can't Deque\n");
+        return -1;
+    }
+
+}
+
+
+
+bool myCQueIsEmpty(MyCQue* obj) {
+    if(obj->currentSize)
+        return false;
+    else
+        return true;
+}
+
+bool myCQueIsFull(MyCQue* obj) {
+    if(obj->currentSize == obj->maxSize)
+        return true;
+    else
+        return false;
+}
+
+void myCQueFree(MyCQue* obj) {
+    if(obj->que) myLinkedListFree(obj->que);
+    if(obj) free(obj);
+}

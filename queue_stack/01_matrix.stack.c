@@ -158,7 +158,6 @@ MinStack* minStackCreate() {
 /** Push element x onto stack. */
 void minStackPush(MinStack* obj, int x) {
 
-    //printf("stack_push:0x%x,%d\n", obj, x);
     myLinkedListAddAtTail(obj->list, x);
     obj->currentSize++;
 }
@@ -170,7 +169,6 @@ int minStackPop(MinStack* obj) {
     if(obj->currentSize > 0)
     {
         ret = myLinkedListGet(obj->list, obj->currentSize - 1);
-        //printf("stack_pop = %d\n", ret);
         myLinkedListDeleteAtIndex(obj->list, obj->currentSize - 1);
         obj->currentSize--;
         return ret;
@@ -215,4 +213,97 @@ void minStackFree(MinStack* obj) {
     if(obj->list) myLinkedListFree(obj->list);
     free(obj);
 }
-/* 31 test cases in 364ms(<9%) in 12.8MB, on May 16th, 2021 */
+
+int** updateMatrix(int** mat, int matSize, int* matColSize, int* returnSize, int** returnColumnSizes)
+{
+    MinStack *stack_i = NULL;
+    MinStack *stack_j = NULL;
+    int i = 0, j = 0;
+    int m = 0, n = 0;
+    int len = 0;
+    int** ret = NULL;
+    int visited = 2;
+
+    stack_i = minStackCreate();
+    stack_j = minStackCreate();
+
+
+    *returnColumnSizes = malloc(sizeof(int) * matSize);
+    *ret = malloc(sizeof(int*) * matSize)
+
+    for(i = 0; i < matSize; i++)
+    {
+        (*returnColumnSizes)[i] = matColSize[i];
+        (*ret)[i] = malloc(sizeof(int) * matColSize[i]);
+        for(j = 0; j < matColSize[i]; j++)
+        {
+            if(mat[i][j] == 0)
+            {
+                ret[i][j] = 0;
+            }
+            else
+            {
+	            minStackPush(stack_i, i);
+	            minStackPush(stack_j, j);
+	            len = 0;
+                visited++;
+	
+	            while(!minStackEmpty(stack_i))
+	            {
+                    m = minStackPop(stack_i);
+                    n = minStackPop(stack_j);
+                    len++;
+                    /* check left */
+                    if(m >= 1 && mat[m -1][n] == 0)
+                        break;
+                    if(m >=1 && mat[m - 1][n] != visited)
+                    {
+                        minStackPush(stack_i, m - 1);
+                        minStackPush(stack_j, n);
+                        mat[m - 1][n] = visited
+                    }
+                    /* check right */
+                    if((m + 1) <  matColSize[i] && mat[m + 1][n] == 0)
+                        break;
+                    if((m + ) < matColSize[i] && mat[m + 1][n] != visited)
+                    {
+                        minStackPush(stack_i, m + 1);
+                        minStackPush(stack_j, n);
+                        mat[m + 1][n] = visited
+                    }
+                    /* check up */
+                    if(n >= 1 && mat[m][n - 1] == 0)
+                        break;
+                    if(m >=1 && mat[m][n - 1] != visited)
+                    {
+                        minStackPush(stack_i, m);
+                        minStackPush(stack_j, n - 1);
+                        mat[m][n - 1] = visited
+                    }
+                    /* check down */
+                    if((n + 1) <  matColSize[i] && mat[m][n + 1] == 0)
+                        break;
+                    if((n + 1) < matColSize[i] && mat[m][n + 1] != visited)
+                    {
+                        minStackPush(stack_i, m);
+                        minStackPush(stack_j, n + 1);
+                        mat[m][n + 1] = visited
+                    }
+	
+	            } /* end while */
+                ret[m][n] = len;
+            } /* end of if mat[i][j] == 0, else */
+
+        } /* end of for j */
+
+    } /* end of for i */
+    *returnSize = matSize;
+
+    minStackFree(stack_i);
+    minStackFree(stack_j);
+
+    return ret;
+
+}
+
+

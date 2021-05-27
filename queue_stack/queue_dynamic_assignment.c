@@ -19,18 +19,16 @@ void myLinkedListAddAtTail(MyLinkedList* obj, int val) {
     MyLinkedList* end = NULL;
     MyLinkedList* ptr = NULL;
 
-    //if(! EmptyList(obj))
+    //printf("%s:0x%x:%d\n", __func__, obj, val);
     if(obj)
     {
         end = myLinkedListCreate();
-        end->val = val;
-        end->next = NULL;
         ptr = obj;
-        //while(! EmptyList(ptr->next))
         while(ptr->next)
         {
             ptr = ptr->next;
         }
+        ptr->val = val;
         ptr->next = end;
     }
     else
@@ -46,7 +44,7 @@ void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
     MyLinkedList* temp = NULL;
     int i;
 
-    //if(!EmptyList(obj))
+    //printf("%s:%d\n", __func__, val);
     if(obj)
     {
         if(index > 0)
@@ -54,7 +52,6 @@ void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
             ptr = obj;
             for(i = 0; i < index - 1;)
             {
-                //if(!EmptyList(ptr->next))
                 if(ptr->next)
                 {
                     ptr = ptr->next;
@@ -65,7 +62,6 @@ void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
             }
             if(i == index - 1)
             {
-                //if(!EmptyList(ptr->next))
                 if(ptr->next)
                 {
                     temp = ptr->next;
@@ -90,14 +86,13 @@ int myLinkedListGet(MyLinkedList* obj, int index) {
     MyLinkedList* ptr = NULL;
     int i;
 
-    //if(! EmptyList(obj))
+    //printf("%s:0x%x\n", __func__, obj);
     if(obj)
         ptr = obj;
     else
         return -1;
     for(i = 0; i < index;)
     {
-        //if(! EmptyList(ptr->next))
         if(ptr->next)
         {
             ptr = ptr->next;
@@ -106,9 +101,10 @@ int myLinkedListGet(MyLinkedList* obj, int index) {
         else
             break;
     }
-    //if(i == index && !EmptyList(ptr))
+    //printf("%s:0x%x\n", __func__, obj);
     if(i == index && ptr)
     {
+        //printf("%s:%d\n", __func__, ptr->val);
         return ptr->val;
     }
     else
@@ -146,6 +142,7 @@ MyCQue* myCQueCreate() {
 }
 
 bool myCQueEnQue(MyCQue* obj, int value) {
+    //printf("EnQue-%d\n", value);
     myLinkedListAddAtTail(obj->que, value);
     obj->currentSize++;
     return true;
@@ -159,17 +156,16 @@ int myCQueDeQue(MyCQue* obj) {
         obj->currentSize--;
         ret = myLinkedListGet(obj->que, 0);
         myLinkedListDeleteAtIndex(obj->que, 0);
+        //printf("DeQue-%d\n", ret);
         return ret;
     }
     else
     {
-        printf(" Empty queue, can't Deque\n");
+        //printf(" Empty queue, can't Deque\n");
         return -1;
     }
 
 }
-
-
 
 bool myCQueIsEmpty(MyCQue* obj) {
     if(obj->currentSize)
@@ -178,14 +174,8 @@ bool myCQueIsEmpty(MyCQue* obj) {
         return true;
 }
 
-bool myCQueIsFull(MyCQue* obj) {
-    if(obj->currentSize == obj->maxSize)
-        return true;
-    else
-        return false;
-}
-
 void myCQueFree(MyCQue* obj) {
     if(obj->que) myLinkedListFree(obj->que);
     if(obj) free(obj);
 }
+

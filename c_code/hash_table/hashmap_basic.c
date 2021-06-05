@@ -1,5 +1,6 @@
 
 #define SIZE 1000001
+#define DELTA 1000000000
 
 typedef struct {
     int* ptr;

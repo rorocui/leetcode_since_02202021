@@ -66,7 +66,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
     MyHashMap* new = NULL;
 
     new = myHashMapCreate();
-    ret = malloc(2, sizeof(int));
+    ret = malloc(2 * sizeof(int));
     ret[0] = ret[1] = -1;
     *returnSize = 2;
     for(i = 0; i < numsSize; i++)

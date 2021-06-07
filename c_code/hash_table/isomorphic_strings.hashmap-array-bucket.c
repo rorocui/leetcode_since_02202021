@@ -21,7 +21,7 @@ MyHashMap* myHashMapCreate()
     ret->ptr = malloc(sizeof(int) * SIZE);
     for(i = 0; i < SIZE; i++)
         ret->ptr[i] = INIT_NUM;
-    count = 0;
+    ret->count = 0;
     
     return ret;
 }
@@ -38,8 +38,9 @@ int myHashMapGet(MyHashMap* obj, int key)
   
 }
 
-/** Count value accounting key and current count*/
-void myHashMapPut(MyHashMap* obj, int key) 
+/** Calculate value accounting key and current count
+ *  return 'count' based on key */
+int myHashMapPut(MyHashMap* obj, int key) 
 {
     int ret = 0;
 
@@ -48,7 +49,10 @@ void myHashMapPut(MyHashMap* obj, int key)
     {
         obj->count++;
         obj->ptr[key] = obj->count;
+        return obj->count;
     }
+    else
+        return ret;
 }
 
 /** Removes the mapping of the specified value key if this map contains a mapping for the key */
@@ -65,5 +69,21 @@ void myHashMapFree(MyHashMap* obj) {
     }
 }
 
-/* 36-164(<26%)-187.9 , on May 30th, 2021 */
+bool isIsomorphic(char * s, char * t)
+{
+    MyHashMap* hashmap_s = NULL;
+    MyHashMap* hashmap_t = NULL;
+    int i;
 
+    hashmap_s = myHashMapCreate();
+    hashmap_t = myHashMapCreate();
+
+    for(i = 0; i < strlen(s); i++)
+    {
+        if(myHashMapPut(hashmap_s, (int)s[i]) != myHashMapPut(hashmap_t, (int)t[i]))
+                return false;
+    }
+    return true;
+}
+
+/* 69-40(<6%)-23.8, on Jun 6th, 2021 */

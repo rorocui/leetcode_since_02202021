@@ -1,11 +1,4 @@
-#define SIZE 100001
-#define DELTA 1000000000
-#define BUCKET_SIZE 10000
-#define ERROR_CODE 0xFFFFFFFF
-#define MIN_INT_32 0xFFFFFFFF
-
 typedef struct {
-    int key;
     int val;
     struct MyLinkedList* next;
 } MyLinkedList;
@@ -13,18 +6,21 @@ typedef struct {
 /** Initialize your data structure here. */
 
 MyLinkedList* myLinkedListCreate() {
+    //printf("%s\n", __FUNCTION__);
     MyLinkedList* new = NULL;
     new = (MyLinkedList*)malloc(sizeof(MyLinkedList));
-    new->key = new->val = MIN_INT_32;
+    new->val = -1;
     new->next = NULL;
     return new;
 }
 
 /** Append a node of value val to the last element of the linked list. */
-void myLinkedListAddAtTail(MyLinkedList* obj, int key, int val) {
+void myLinkedListAddAtTail(MyLinkedList* obj, int val) {
     MyLinkedList* end = NULL;
     MyLinkedList* ptr = NULL;
 
+    //if(val == 14498) printf("%s:0x%x:%d\n", __func__, obj, val);
+    //if(val == 14498) myLinkedListPrint(obj);
     if(obj)
     {
         end = myLinkedListCreate();
@@ -34,15 +30,14 @@ void myLinkedListAddAtTail(MyLinkedList* obj, int key, int val) {
             ptr = ptr->next;
         }
         ptr->val = val;
-        ptr->key = key
         ptr->next = end;
     }
     else
     {
         obj->val = val;
-        ptr->key = key
 
     }
+    //if(val == 14498) {printf("after:\n"); myLinkedListPrint(obj);}
 }
 
 /** Delete the index-th node in the linked list, if the index is valid. */
@@ -51,6 +46,8 @@ void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
     MyLinkedList* temp = NULL;
     int i;
 
+    //if(obj == 0x6020000ee4b0) printf("%s:0x%x:%d\n", __func__, obj, index);
+    //if(obj == 0x6020000ee4b0) myLinkedListPrint(obj);
     if(obj)
     {
         if(index > 0)
@@ -83,32 +80,33 @@ void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
                 ptr = obj->next;
                 obj->next = ptr->next;
                 obj->val = ptr->val;
-                obj->key = ptr->key;
                 free(ptr);
             }
             else
             {
-                obj->key = obj->val = MIN_INT_32;
+                obj->val = -1;
             }
         }
     }
 
 }
 
-
-/** check if list contains key
- *  return list node  index **/
-int myLinkedListContain(MyLinkedList* obj, int key)
+/** check if list contains value */
+int myLinkedListContain(MyLinkedList* obj, int value)
 {
+    //if(value == 14498) printf("%s:0x%lx:%d\n", __func__, obj, value);
     MyLinkedList* ptr = obj;
     int index = 0;
+    //if(value == 14498) myLinkedListPrint(obj);
 
-    if(ptr->key == key) return index;
+    //if(value == 14498) printf("%d\n", ptr->val);
+    if(ptr->val == value) return index;
     while(ptr->next)
     {
         ptr = ptr->next;
         index++;
-        if(ptr->key == key) return index;
+        //printf("%d,index=%d\n", ptr->val, index);
+        if(ptr->val == value) return index;
     }
     return -1;
 }
@@ -124,7 +122,7 @@ int myLinkedListGet(MyLinkedList* obj, int index)
     if(obj)
         ptr = obj;
     else
-        return ERROR_CODE;
+        return -1;
     for(i = 0; i < index;)
     {
         if(ptr->next)
@@ -143,7 +141,7 @@ int myLinkedListGet(MyLinkedList* obj, int index)
     }
     else
     {
-        return ERROR_CODE;
+        return -1;
     }
 }
 
@@ -176,44 +174,55 @@ void myLinkedListPrint(MyLinkedList* obj)
 typedef struct 
 {
     MyLinkedList** arr;
-} MyHashMap;
+} MyHashSet;
 
-MyHashMap* myHashMapCreate() 
+#define SIZE 1001
+#define BUCKET_SIZE 1000
+
+MyHashSet* myHashSetCreate() 
 {
     //printf("%s\n", __FUNCTION__);
-    MyHashMap* obj = malloc(sizeof(MyHashMap));
+    MyHashSet* obj = malloc(sizeof(MyHashSet));
     int j; 
 
     obj->arr = malloc(sizeof(MyLinkedList*) * SIZE);
-    for(j = 0; j < SIZE; j++)    
+    for(j = 0; j < 1001; j++)    
     {
         obj->arr[j] = myLinkedListCreate();
     }
     return obj;
 }
 
-int myHashMapFun(int key)
+int myHashSetFun(int key)
 {
-    return (key + DELTA) % BUCKET_SIZE;
+    return key % BUCKET_SIZE;
 }
 
-void myHashMapPut(MyHashMap* obj, int key, int val) 
+bool myHashSetContains(MyHashSet* obj, int key) 
 {
     //printf("%s:%d\n", __func__, key);
-    myLinkedListAddAtTail(obj->arr[myHashMapFun(key)], key, val);
+    if(myLinkedListContain(obj->arr[myHashSetFun(key)], key) == -1) return false;
+    else    return true;
 }
 
-void myHashMapRemove(MyHashMap* obj, int key) 
+void myHashSetAdd(MyHashSet* obj, int key) 
+{
+    //printf("%s:%d\n", __func__, key);
+    if(!myHashSetContains(obj, key))
+        myLinkedListAddAtTail(obj->arr[myHashSetFun(key)], key);
+}
+
+void myHashSetRemove(MyHashSet* obj, int key) 
 {
     //if(key == 14498) printf("%s:%d\n", __func__, key);
     int index = 0; 
 
-    index = myLinkedListContain(obj->arr[myHashMapFun(key)],key);
-    if(index != ERROR_CODE)
-        myLinkedListDeleteAtIndex(obj->arr[myHashMapFun(key)], index);
+    index = myLinkedListContain(obj->arr[myHashSetFun(key)],key);
+    if(index != -1)
+        myLinkedListDeleteAtIndex(obj->arr[myHashSetFun(key)], index);
 }
 
-void myHashMapFree(MyHashMap* obj) 
+void myHashSetFree(MyHashSet* obj) 
 {
     //printf("%s\n", __func__);
     int i;

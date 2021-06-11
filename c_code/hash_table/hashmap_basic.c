@@ -1,9 +1,10 @@
-#define SIZE 50000
 //#define DELTA 1000000000
 //#define BUCKET_SIZE 10000
-#define INIT_NUM 0
-#define ERROR_CODE 0xFFFFFFFF
-#define MIN_INT_32 0xFFFFFFFF
+#define SIZE        2001
+#define INIT_NUM    0
+#define ERROR_CODE  0x80000000
+#define MIN_INT_32  0x80000000
+#define MAX_INT     100001
 
 typedef struct {
     int* ptr;

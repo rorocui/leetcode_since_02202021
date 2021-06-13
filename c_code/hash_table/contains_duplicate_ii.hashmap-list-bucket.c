@@ -292,3 +292,34 @@ void myHashMapFree(MyHashMap* obj)
     if(obj) free(obj);
 } 
 
+bool containsNearbyDuplicate(int* nums, int numsSize, int k)
+{
+    MyHashMap *hash_new;
+    int i, index;
+
+    hash_new = myHashMapCreate();
+    for(i = 0; i < numsSize; i ++)
+    {
+        index = myHashMapGet(hash_new, nums[i]);
+        //printf("index-%d-%d\n", index, i);
+        if(index != ERROR_CODE && index != MIN_INT_32)
+        {
+            if(abs(index - i) <= k)
+            {
+                myHashMapFree(hash_new);
+                return true;
+            }
+        }
+        myHashMapPut(hash_new, nums[i], i);
+    }
+    
+    myHashMapFree(hash_new);
+    return false;
+}
+
+/* 23-1072(<41%)-251.8, on Jun 12th, 2021 */
+/* Improvement: 
+** 1. Create LinkedListUpdate, instead of two functions fo linkedListContain and LinkedListAddTail.
+** 2. Add LinkedListGetVal, instead of two functions of LinkedListContains and LinkedListGetbyIndex.
+** No obvious improvement.
+** 23-912(<41%)-253.3, on Jun 12th, 2021*/ 

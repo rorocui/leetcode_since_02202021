@@ -1,0 +1,420 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AnagramsHashSet	group_anagrams.hasmap-array-bucket.c	/^} AnagramsHashSet;$/;"	t	typeref:struct:__anon13	file:
+BUCKET_SIZE	contains_duplicate.method.1.c	2;"	d	file:
+BUCKET_SIZE	contains_duplicate_ii.hashmap-list-bucket.c	3;"	d	file:
+BUCKET_SIZE	group_anagrams.hasmap-array-bucket.c	8;"	d	file:
+BUCKET_SIZE	hashmap.list-bucket.c	3;"	d	file:
+BUCKET_SIZE	hashset.list-bucket.c	180;"	d	file:
+BUCKET_SIZE	hashset_list_bucket.c	180;"	d	file:
+BUCKET_SIZE	isomorphic_strings.hashmap-array-bucket.c	3;"	d	file:
+BUCKET_SIZE	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	3;"	d	file:
+BUCKET_SIZE	single_number.method.1.linked-list-bucket.c	180;"	d	file:
+BUCKET_SIZE	two_sum.hashmap-list-bucket.c	3;"	d	file:
+DELTA	contains_duplicate.c	7;"	d	file:
+DELTA	contains_duplicate.method.1.c	3;"	d	file:
+DELTA	contains_duplicate_ii.hashmap-list-bucket.c	2;"	d	file:
+DELTA	find_duplicate_subtrees.c	2;"	d	file:
+DELTA	find_duplicate_subtrees.optimized.c	2;"	d	file:
+DELTA	group_anagrams.hasmap-array-bucket.c	7;"	d	file:
+DELTA	hashmap.list-bucket.c	2;"	d	file:
+DELTA	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	2;"	d	file:
+DELTA	single_number.method.0.array-bucket.c	8;"	d	file:
+DELTA	two_sum.hashmap-list-bucket.c	2;"	d	file:
+DELTA	two_sum.hashmap_array_bucket.c	3;"	d	file:
+ERROR_CODE	contains_duplicate_ii.hashmap-list-bucket.c	4;"	d	file:
+ERROR_CODE	first_unique_character_in_a_string.hashmap-array-bucket.c	5;"	d	file:
+ERROR_CODE	group_anagrams.hasmap-array-bucket.c	10;"	d	file:
+ERROR_CODE	hashmap.list-bucket.c	4;"	d	file:
+ERROR_CODE	hashmap_basic.c	5;"	d	file:
+ERROR_CODE	intersection_of_two_arrays_ii.hashmap-array-bucket.c	3;"	d	file:
+ERROR_CODE	isomorphic_strings.hashmap-array-bucket.c	5;"	d	file:
+ERROR_CODE	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	4;"	d	file:
+ERROR_CODE	two_sum.hashmap-list-bucket.c	4;"	d	file:
+ERROR_CODE	valid_sudoku.bashset-array-bucket.c	8;"	d	file:
+FALSE_CODE	contains_duplicate_ii.hashmap-list-bucket.c	10;"	d	file:
+FALSE_CODE	group_anagrams.hasmap-array-bucket.c	13;"	d	file:
+FALSE_CODE	hashmap.list-bucket.c	10;"	d	file:
+FALSE_CODE	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	10;"	d	file:
+HASH_INIT	happy_number.hashset.c	6;"	d	file:
+HASH_INIT	hashset_basic.c	6;"	d	file:
+HASH_NUM	valid_sudoku.bashset-array-bucket.c	7;"	d	file:
+INIT_KEY	group_anagrams.hasmap-array-bucket.c	6;"	d	file:
+INIT_NUM	find_duplicate_subtrees.c	5;"	d	file:
+INIT_NUM	find_duplicate_subtrees.optimized.c	5;"	d	file:
+INIT_NUM	first_unique_character_in_a_string.hashmap-array-bucket.c	4;"	d	file:
+INIT_NUM	group_anagrams.hasmap-array-bucket.c	5;"	d	file:
+INIT_NUM	hashmap_basic.c	4;"	d	file:
+INIT_NUM	intersection_of_two_arrays_ii.hashmap-array-bucket.c	2;"	d	file:
+INIT_NUM	isomorphic_strings.hashmap-array-bucket.c	4;"	d	file:
+INIT_TREE_NODE	find_duplicate_subtrees.optimized.c	6;"	d	file:
+KEY_SIZE	group_anagrams.hasmap-array-bucket.c	2;"	d	file:
+LETTER_SIZE	group_anagrams.hasmap-array-bucket.c	1;"	d	file:
+LIST_SIZE	find_duplicate_subtrees.c	1;"	d	file:
+LIST_SIZE	find_duplicate_subtrees.optimized.c	1;"	d	file:
+LIST_SIZE	group_anagrams.hasmap-array-bucket.c	3;"	d	file:
+MAX	contains_duplicate.method.1.c	4;"	d	file:
+MAX	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	8;"	d	file:
+MAX_INT	first_unique_character_in_a_string.hashmap-array-bucket.c	7;"	d	file:
+MAX_INT	hashmap_basic.c	7;"	d	file:
+MAX_INT_32	contains_duplicate_ii.hashmap-list-bucket.c	6;"	d	file:
+MAX_INT_32	group_anagrams.hasmap-array-bucket.c	12;"	d	file:
+MAX_INT_32	hashmap.list-bucket.c	6;"	d	file:
+MAX_INT_32	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	6;"	d	file:
+MIN_INT_32	contains_duplicate_ii.hashmap-list-bucket.c	5;"	d	file:
+MIN_INT_32	first_unique_character_in_a_string.hashmap-array-bucket.c	6;"	d	file:
+MIN_INT_32	group_anagrams.hasmap-array-bucket.c	11;"	d	file:
+MIN_INT_32	hashmap.list-bucket.c	5;"	d	file:
+MIN_INT_32	hashmap_basic.c	6;"	d	file:
+MIN_INT_32	intersection_of_two_arrays_ii.hashmap-array-bucket.c	4;"	d	file:
+MIN_INT_32	isomorphic_strings.hashmap-array-bucket.c	6;"	d	file:
+MIN_INT_32	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	5;"	d	file:
+MIN_INT_32	two_sum.hashmap-list-bucket.c	5;"	d	file:
+MyHashMap	contains_duplicate_ii.hashmap-list-bucket.c	/^} MyHashMap;$/;"	t	typeref:struct:__anon3	file:
+MyHashMap	first_unique_character_in_a_string.hashmap-array-bucket.c	/^} MyHashMap;$/;"	t	typeref:struct:__anon10	file:
+MyHashMap	group_anagrams.hasmap-array-bucket.c	/^} MyHashMap;$/;"	t	typeref:struct:__anon11	file:
+MyHashMap	hashmap.list-bucket.c	/^} MyHashMap;$/;"	t	typeref:struct:__anon17	file:
+MyHashMap	hashmap_basic.c	/^} MyHashMap;$/;"	t	typeref:struct:__anon15	file:
+MyHashMap	intersection_of_two_arrays_ii.hashmap-array-bucket.c	/^} MyHashMap;$/;"	t	typeref:struct:__anon24	file:
+MyHashMap	isomorphic_strings.hashmap-array-bucket.c	/^} MyHashMap;$/;"	t	typeref:struct:__anon25	file:
+MyHashMap	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^} MyHashMap;$/;"	t	typeref:struct:__anon27	file:
+MyHashMap	two_sum.hashmap-list-bucket.c	/^} MyHashMap;$/;"	t	typeref:struct:__anon33	file:
+MyHashMap	two_sum.hashmap_array_bucket.c	/^} MyHashMap;$/;"	t	typeref:struct:__anon31	file:
+MyHashSet	contains_duplicate.c	/^} MyHashSet;$/;"	t	typeref:struct:__anon1	file:
+MyHashSet	contains_duplicate.method.1.c	/^} MyHashSet;$/;"	t	typeref:struct:__anon5	file:
+MyHashSet	happy_number.hashset.c	/^} MyHashSet;$/;"	t	typeref:struct:__anon14	file:
+MyHashSet	hashset.list-bucket.c	/^} MyHashSet;$/;"	t	typeref:struct:__anon22	file:
+MyHashSet	hashset_basic.c	/^} MyHashSet;$/;"	t	typeref:struct:__anon18	file:
+MyHashSet	hashset_list_bucket.c	/^} MyHashSet;$/;"	t	typeref:struct:__anon20	file:
+MyHashSet	intersection_of_two_arrays.c	/^} MyHashSet;$/;"	t	typeref:struct:__anon23	file:
+MyHashSet	single_number.method.0.array-bucket.c	/^} MyHashSet;$/;"	t	typeref:struct:__anon28	file:
+MyHashSet	single_number.method.1.linked-list-bucket.c	/^} MyHashSet;$/;"	t	typeref:struct:__anon30	file:
+MyHashSet	valid_sudoku.bashset-array-bucket.c	/^} MyHashSet;$/;"	t	typeref:struct:__anon34	file:
+MyLinkedList	contains_duplicate.method.1.c	/^} MyLinkedList;$/;"	t	typeref:struct:__anon4	file:
+MyLinkedList	contains_duplicate_ii.hashmap-list-bucket.c	/^} MyLinkedList;$/;"	t	typeref:struct:__anon2	file:
+MyLinkedList	find_duplicate_subtrees.c	/^} MyLinkedList;$/;"	t	typeref:struct:__anon6	file:
+MyLinkedList	find_duplicate_subtrees.optimized.c	/^} MyLinkedList;$/;"	t	typeref:struct:__anon8	file:
+MyLinkedList	group_anagrams.hasmap-array-bucket.c	/^} MyLinkedList;$/;"	t	typeref:struct:__anon12	file:
+MyLinkedList	hashmap.list-bucket.c	/^} MyLinkedList;$/;"	t	typeref:struct:__anon16	file:
+MyLinkedList	hashset.list-bucket.c	/^} MyLinkedList;$/;"	t	typeref:struct:__anon21	file:
+MyLinkedList	hashset_list_bucket.c	/^} MyLinkedList;$/;"	t	typeref:struct:__anon19	file:
+MyLinkedList	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^} MyLinkedList;$/;"	t	typeref:struct:__anon26	file:
+MyLinkedList	single_number.method.1.linked-list-bucket.c	/^} MyLinkedList;$/;"	t	typeref:struct:__anon29	file:
+MyLinkedList	two_sum.hashmap-list-bucket.c	/^} MyLinkedList;$/;"	t	typeref:struct:__anon32	file:
+NODE_SIZE	find_duplicate_subtrees.c	4;"	d	file:
+NODE_SIZE	find_duplicate_subtrees.optimized.c	4;"	d	file:
+NOT_FOUND	group_anagrams.hasmap-array-bucket.c	9;"	d	file:
+NO_DUPLICATED	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	9;"	d	file:
+NUM_REPLACE_ZERO	find_duplicate_subtrees.optimized.c	7;"	d	file:
+SIZE	contains_duplicate.c	6;"	d	file:
+SIZE	contains_duplicate.method.1.c	1;"	d	file:
+SIZE	contains_duplicate_ii.hashmap-list-bucket.c	1;"	d	file:
+SIZE	first_unique_character_in_a_string.hashmap-array-bucket.c	1;"	d	file:
+SIZE	happy_number.hashset.c	7;"	d	file:
+SIZE	hashmap.list-bucket.c	1;"	d	file:
+SIZE	hashmap_basic.c	3;"	d	file:
+SIZE	hashset.list-bucket.c	179;"	d	file:
+SIZE	hashset_basic.c	7;"	d	file:
+SIZE	hashset_list_bucket.c	179;"	d	file:
+SIZE	intersection_of_two_arrays.c	2;"	d	file:
+SIZE	intersection_of_two_arrays_ii.hashmap-array-bucket.c	1;"	d	file:
+SIZE	isomorphic_strings.hashmap-array-bucket.c	1;"	d	file:
+SIZE	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	1;"	d	file:
+SIZE	single_number.method.0.array-bucket.c	7;"	d	file:
+SIZE	single_number.method.1.linked-list-bucket.c	179;"	d	file:
+SIZE	two_sum.hashmap-list-bucket.c	1;"	d	file:
+SIZE	two_sum.hashmap_array_bucket.c	2;"	d	file:
+SIZE	valid_sudoku.bashset-array-bucket.c	6;"	d	file:
+STRING_SIZE	find_duplicate_subtrees.c	3;"	d	file:
+STRING_SIZE	find_duplicate_subtrees.optimized.c	3;"	d	file:
+STRING_SIZE	group_anagrams.hasmap-array-bucket.c	4;"	d	file:
+STRING_SIZE	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	11;"	d	file:
+StringTreeNode	find_duplicate_subtrees.optimized.c	/^struct StringTreeNode {$/;"	s	file:
+TreeHashSet	find_duplicate_subtrees.c	/^} TreeHashSet;$/;"	t	typeref:struct:__anon7	file:
+TreeHashSet	find_duplicate_subtrees.optimized.c	/^} TreeHashSet;$/;"	t	typeref:struct:__anon9	file:
+anagramsHashFun	group_anagrams.hasmap-array-bucket.c	/^int anagramsHashFun(char *str)$/;"	f
+anagramsHashSetAdd	group_anagrams.hasmap-array-bucket.c	/^void anagramsHashSetAdd(AnagramsHashSet* obj, char* key) $/;"	f
+anagramsHashSetCreate	group_anagrams.hasmap-array-bucket.c	/^AnagramsHashSet* anagramsHashSetCreate() $/;"	f
+anagramsHashSetFree	group_anagrams.hasmap-array-bucket.c	/^void anagramsHashSetFree(AnagramsHashSet* obj) $/;"	f
+arr	contains_duplicate.c	/^    int *arr;$/;"	m	struct:__anon1	file:
+arr	contains_duplicate.method.1.c	/^    MyLinkedList** arr;$/;"	m	struct:__anon5	file:
+arr	contains_duplicate_ii.hashmap-list-bucket.c	/^    MyLinkedList** arr;$/;"	m	struct:__anon3	file:
+arr	find_duplicate_subtrees.c	/^    MyLinkedList** arr;$/;"	m	struct:__anon7	file:
+arr	find_duplicate_subtrees.optimized.c	/^    MyLinkedList** arr;$/;"	m	struct:__anon9	file:
+arr	group_anagrams.hasmap-array-bucket.c	/^    MyLinkedList** arr;$/;"	m	struct:__anon13	file:
+arr	happy_number.hashset.c	/^    int *arr;$/;"	m	struct:__anon14	file:
+arr	hashmap.list-bucket.c	/^    MyLinkedList** arr;$/;"	m	struct:__anon17	file:
+arr	hashset.list-bucket.c	/^    MyLinkedList** arr;$/;"	m	struct:__anon22	file:
+arr	hashset_basic.c	/^    int *arr;$/;"	m	struct:__anon18	file:
+arr	hashset_list_bucket.c	/^    MyLinkedList** arr;$/;"	m	struct:__anon20	file:
+arr	intersection_of_two_arrays.c	/^    int *arr;$/;"	m	struct:__anon23	file:
+arr	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^    MyLinkedList** arr;$/;"	m	struct:__anon27	file:
+arr	single_number.method.0.array-bucket.c	/^    int *arr;$/;"	m	struct:__anon28	file:
+arr	single_number.method.1.linked-list-bucket.c	/^    MyLinkedList** arr;$/;"	m	struct:__anon30	file:
+arr	two_sum.hashmap-list-bucket.c	/^    MyLinkedList** arr;$/;"	m	struct:__anon33	file:
+arr	valid_sudoku.bashset-array-bucket.c	/^    int *arr;$/;"	m	struct:__anon34	file:
+checked	find_duplicate_subtrees.c	/^    bool checked;$/;"	m	struct:__anon6	file:
+checked	find_duplicate_subtrees.optimized.c	/^    bool checked;$/;"	m	struct:__anon8	file:
+containsDuplicate	contains_duplicate.c	/^bool containsDuplicate(int* nums, int numsSize)$/;"	f
+containsDuplicate	contains_duplicate.method.1.c	/^bool containsDuplicate(int* nums, int numsSize)$/;"	f
+containsNearbyDuplicate	contains_duplicate_ii.hashmap-list-bucket.c	/^bool containsNearbyDuplicate(int* nums, int numsSize, int k)$/;"	f
+copyTreeToStringTree	find_duplicate_subtrees.optimized.c	/^struct StringTreeNode* copyTreeToStringTree(struct TreeNode* root)$/;"	f
+count	group_anagrams.hasmap-array-bucket.c	/^    int count;$/;"	m	struct:__anon11	file:
+count	group_anagrams.hasmap-array-bucket.c	/^    int* count;$/;"	m	struct:__anon13	file:
+count	hashmap_basic.c	/^    int count;$/;"	m	struct:__anon15	file:
+count	isomorphic_strings.hashmap-array-bucket.c	/^    int count;$/;"	m	struct:__anon25	file:
+findDuplicateSubtrees	find_duplicate_subtrees.c	/^struct TreeNode** findDuplicateSubtrees(struct TreeNode* root, int* returnSize)$/;"	f
+findDuplicateSubtrees	find_duplicate_subtrees.optimized.c	/^struct TreeNode** findDuplicateSubtrees(struct TreeNode* root, int* returnSize)$/;"	f
+findRestaurant	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^char ** findRestaurant(char ** list1, int list1Size, char ** list2, int list2Size, int* returnSize)$/;"	f
+firstUniqChar	first_unique_character_in_a_string.hashmap-array-bucket.c	/^int firstUniqChar(char *s)$/;"	f
+groupAnagrams	group_anagrams.hasmap-array-bucket.c	/^char *** groupAnagrams(char ** strs, int strsSize, int* returnSize, int** returnColumnSizes)$/;"	f
+index	first_unique_character_in_a_string.hashmap-array-bucket.c	/^    int index;$/;"	m	struct:__anon10	file:
+intersect	intersection_of_two_arrays_ii.hashmap-array-bucket.c	/^int* intersect(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize)$/;"	f
+intersection	intersection_of_two_arrays.c	/^int* intersection(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize)$/;"	f
+isHappy	happy_number.hashset.c	/^bool isHappy(int n)$/;"	f
+isIsomorphic	isomorphic_strings.hashmap-array-bucket.c	/^bool isIsomorphic(char * s, char * t)$/;"	f
+isValidSudoku	valid_sudoku.bashset-array-bucket.c	/^bool isValidSudoku(char** board, int boardSize, int* boardColSize)$/;"	f
+key	contains_duplicate_ii.hashmap-list-bucket.c	/^    int key;$/;"	m	struct:__anon2	file:
+key	hashmap.list-bucket.c	/^    int key;$/;"	m	struct:__anon16	file:
+key	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^    char* key;$/;"	m	struct:__anon26	file:
+key	two_sum.hashmap-list-bucket.c	/^    int key;$/;"	m	struct:__anon32	file:
+keyCmp	group_anagrams.hasmap-array-bucket.c	/^bool keyCmp(char* char1, char* char2)$/;"	f
+keyCpy	group_anagrams.hasmap-array-bucket.c	/^void keyCpy(char* dest, char* src)$/;"	f
+left	find_duplicate_subtrees.optimized.c	/^    struct StringTreeNode *left;$/;"	m	struct:StringTreeNode	typeref:struct:StringTreeNode::StringTreeNode	file:
+list_key	group_anagrams.hasmap-array-bucket.c	/^static MyLinkedList* list_key;$/;"	v	file:
+list_key_count	group_anagrams.hasmap-array-bucket.c	/^static list_key_count;$/;"	v	file:
+matrixToInt	valid_sudoku.bashset-array-bucket.c	/^int matrixToInt(int row, int col)$/;"	f
+myHashMapCreate	contains_duplicate_ii.hashmap-list-bucket.c	/^MyHashMap* myHashMapCreate() $/;"	f
+myHashMapCreate	first_unique_character_in_a_string.hashmap-array-bucket.c	/^MyHashMap* myHashMapCreate() $/;"	f
+myHashMapCreate	group_anagrams.hasmap-array-bucket.c	/^MyHashMap* myHashMapCreate() $/;"	f
+myHashMapCreate	hashmap.list-bucket.c	/^MyHashMap* myHashMapCreate() $/;"	f
+myHashMapCreate	hashmap_basic.c	/^MyHashMap* myHashMapCreate() $/;"	f
+myHashMapCreate	intersection_of_two_arrays_ii.hashmap-array-bucket.c	/^MyHashMap* myHashMapCreate() $/;"	f
+myHashMapCreate	isomorphic_strings.hashmap-array-bucket.c	/^MyHashMap* myHashMapCreate() $/;"	f
+myHashMapCreate	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^MyHashMap* myHashMapCreate() $/;"	f
+myHashMapCreate	two_sum.hashmap-list-bucket.c	/^MyHashMap* myHashMapCreate() $/;"	f
+myHashMapCreate	two_sum.hashmap_array_bucket.c	/^MyHashMap* myHashMapCreate() $/;"	f
+myHashMapFindMinVal	first_unique_character_in_a_string.hashmap-array-bucket.c	/^int myHashMapFindMinVal(MyHashMap* obj)$/;"	f
+myHashMapFree	contains_duplicate_ii.hashmap-list-bucket.c	/^void myHashMapFree(MyHashMap* obj) $/;"	f
+myHashMapFree	first_unique_character_in_a_string.hashmap-array-bucket.c	/^void myHashMapFree(MyHashMap* obj) {$/;"	f
+myHashMapFree	group_anagrams.hasmap-array-bucket.c	/^void myHashMapFree(MyHashMap* obj) {$/;"	f
+myHashMapFree	hashmap.list-bucket.c	/^void myHashMapFree(MyHashMap* obj) $/;"	f
+myHashMapFree	hashmap_basic.c	/^void myHashMapFree(MyHashMap* obj) {$/;"	f
+myHashMapFree	intersection_of_two_arrays_ii.hashmap-array-bucket.c	/^void myHashMapFree(MyHashMap* obj) {$/;"	f
+myHashMapFree	isomorphic_strings.hashmap-array-bucket.c	/^void myHashMapFree(MyHashMap* obj) {$/;"	f
+myHashMapFree	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^void myHashMapFree(MyHashMap* obj) $/;"	f
+myHashMapFree	two_sum.hashmap-list-bucket.c	/^void myHashMapFree(MyHashMap* obj) $/;"	f
+myHashMapFree	two_sum.hashmap_array_bucket.c	/^void myHashMapFree(MyHashMap* obj) {$/;"	f
+myHashMapFun	contains_duplicate_ii.hashmap-list-bucket.c	/^int myHashMapFun(int key)$/;"	f
+myHashMapFun	hashmap.list-bucket.c	/^int myHashMapFun(int key)$/;"	f
+myHashMapFun	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^int myHashMapFun(char* key)$/;"	f
+myHashMapFun	two_sum.hashmap-list-bucket.c	/^int myHashMapFun(int key)$/;"	f
+myHashMapGet	contains_duplicate_ii.hashmap-list-bucket.c	/^int myHashMapGet(MyHashMap* obj, int key)$/;"	f
+myHashMapGet	first_unique_character_in_a_string.hashmap-array-bucket.c	/^int myHashMapGet(MyHashMap* obj, int key) $/;"	f
+myHashMapGet	group_anagrams.hasmap-array-bucket.c	/^int myHashMapGet(MyHashMap* obj, int key) $/;"	f
+myHashMapGet	hashmap.list-bucket.c	/^int myHashMapGet(MyHashMap* obj, int key)$/;"	f
+myHashMapGet	hashmap_basic.c	/^int myHashMapGet(MyHashMap* obj, int key) $/;"	f
+myHashMapGet	intersection_of_two_arrays_ii.hashmap-array-bucket.c	/^int myHashMapGet(MyHashMap* obj, int key) $/;"	f
+myHashMapGet	isomorphic_strings.hashmap-array-bucket.c	/^int myHashMapGet(MyHashMap* obj, int key) $/;"	f
+myHashMapGet	two_sum.hashmap-list-bucket.c	/^int myHashMapGet(MyHashMap* obj, int key) $/;"	f
+myHashMapGet	two_sum.hashmap_array_bucket.c	/^int myHashMapGet(MyHashMap* obj, int key) $/;"	f
+myHashMapPut	contains_duplicate_ii.hashmap-list-bucket.c	/^void myHashMapPut(MyHashMap* obj, int key, int val) $/;"	f
+myHashMapPut	first_unique_character_in_a_string.hashmap-array-bucket.c	/^void myHashMapPut(MyHashMap* obj, char key, int val) $/;"	f
+myHashMapPut	group_anagrams.hasmap-array-bucket.c	/^void myHashMapPut(MyHashMap* obj, int key) $/;"	f
+myHashMapPut	hashmap.list-bucket.c	/^void myHashMapPut(MyHashMap* obj, int key, int val) $/;"	f
+myHashMapPut	hashmap_basic.c	/^void myHashMapPut(MyHashMap* obj, int key) $/;"	f
+myHashMapPut	intersection_of_two_arrays_ii.hashmap-array-bucket.c	/^void myHashMapPut(MyHashMap* obj, int key, int operator) $/;"	f
+myHashMapPut	isomorphic_strings.hashmap-array-bucket.c	/^int myHashMapPut(MyHashMap* obj, int key) $/;"	f
+myHashMapPut	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^int myHashMapPut(MyHashMap* obj, char* key, int val) $/;"	f
+myHashMapPut	two_sum.hashmap-list-bucket.c	/^void myHashMapPut(MyHashMap* obj, int key, int val) $/;"	f
+myHashMapPut	two_sum.hashmap_array_bucket.c	/^void myHashMapPut(MyHashMap* obj, int key, int value) $/;"	f
+myHashMapRemove	contains_duplicate_ii.hashmap-list-bucket.c	/^void myHashMapRemove(MyHashMap* obj, int key) $/;"	f
+myHashMapRemove	first_unique_character_in_a_string.hashmap-array-bucket.c	/^void myHashMapRemove(MyHashMap* obj, int key) {$/;"	f
+myHashMapRemove	hashmap.list-bucket.c	/^void myHashMapRemove(MyHashMap* obj, int key) $/;"	f
+myHashMapRemove	hashmap_basic.c	/^void myHashMapRemove(MyHashMap* obj, int key) {$/;"	f
+myHashMapRemove	intersection_of_two_arrays_ii.hashmap-array-bucket.c	/^void myHashMapRemove(MyHashMap* obj, int key) {$/;"	f
+myHashMapRemove	isomorphic_strings.hashmap-array-bucket.c	/^void myHashMapRemove(MyHashMap* obj, int key) {$/;"	f
+myHashMapRemove	two_sum.hashmap-list-bucket.c	/^void myHashMapRemove(MyHashMap* obj, int key) $/;"	f
+myHashMapRemove	two_sum.hashmap_array_bucket.c	/^void myHashMapRemove(MyHashMap* obj, int key) {$/;"	f
+myHashSetAdd	contains_duplicate.c	/^void myHashSetAdd(MyHashSet* obj, int key) $/;"	f
+myHashSetAdd	contains_duplicate.method.1.c	/^void myHashSetAdd(MyHashSet* obj, int key) $/;"	f
+myHashSetAdd	happy_number.hashset.c	/^void myHashSetAdd(MyHashSet* obj, int key) $/;"	f
+myHashSetAdd	hashset.list-bucket.c	/^void myHashSetAdd(MyHashSet* obj, int key) $/;"	f
+myHashSetAdd	hashset_basic.c	/^void myHashSetAdd(MyHashSet* obj, int key) $/;"	f
+myHashSetAdd	hashset_list_bucket.c	/^void myHashSetAdd(MyHashSet* obj, int key) $/;"	f
+myHashSetAdd	intersection_of_two_arrays.c	/^void myHashSetAdd(MyHashSet* obj, int key) $/;"	f
+myHashSetAdd	single_number.method.0.array-bucket.c	/^void myHashSetAdd(MyHashSet* obj, int key) $/;"	f
+myHashSetAdd	single_number.method.1.linked-list-bucket.c	/^void myHashSetAdd(MyHashSet* obj, int key) $/;"	f
+myHashSetAdd	valid_sudoku.bashset-array-bucket.c	/^void myHashSetAdd(MyHashSet* obj, int key, int i, int j) $/;"	f
+myHashSetContains	contains_duplicate.c	/^bool myHashSetContains(MyHashSet* obj, int key) $/;"	f
+myHashSetContains	contains_duplicate.method.1.c	/^bool myHashSetContains(MyHashSet* obj, int key) $/;"	f
+myHashSetContains	happy_number.hashset.c	/^bool myHashSetContains(MyHashSet* obj, int key) $/;"	f
+myHashSetContains	hashset.list-bucket.c	/^bool myHashSetContains(MyHashSet* obj, int key) $/;"	f
+myHashSetContains	hashset_basic.c	/^bool myHashSetContains(MyHashSet* obj, int key) $/;"	f
+myHashSetContains	hashset_list_bucket.c	/^bool myHashSetContains(MyHashSet* obj, int key) $/;"	f
+myHashSetContains	intersection_of_two_arrays.c	/^bool myHashSetContains(MyHashSet* obj, int key) $/;"	f
+myHashSetContains	single_number.method.0.array-bucket.c	/^bool myHashSetContains(MyHashSet* obj, int key) $/;"	f
+myHashSetContains	single_number.method.1.linked-list-bucket.c	/^bool myHashSetContains(MyHashSet* obj, int key) $/;"	f
+myHashSetContains	valid_sudoku.bashset-array-bucket.c	/^bool myHashSetContains(MyHashSet* obj, int key, int i, int j) $/;"	f
+myHashSetCreate	contains_duplicate.c	/^MyHashSet* myHashSetCreate() $/;"	f
+myHashSetCreate	contains_duplicate.method.1.c	/^MyHashSet* myHashSetCreate() $/;"	f
+myHashSetCreate	happy_number.hashset.c	/^MyHashSet* myHashSetCreate() $/;"	f
+myHashSetCreate	hashset.list-bucket.c	/^MyHashSet* myHashSetCreate() $/;"	f
+myHashSetCreate	hashset_basic.c	/^MyHashSet* myHashSetCreate() $/;"	f
+myHashSetCreate	hashset_list_bucket.c	/^MyHashSet* myHashSetCreate() $/;"	f
+myHashSetCreate	intersection_of_two_arrays.c	/^MyHashSet* myHashSetCreate() $/;"	f
+myHashSetCreate	single_number.method.0.array-bucket.c	/^MyHashSet* myHashSetCreate() $/;"	f
+myHashSetCreate	single_number.method.1.linked-list-bucket.c	/^MyHashSet* myHashSetCreate() $/;"	f
+myHashSetCreate	valid_sudoku.bashset-array-bucket.c	/^MyHashSet* myHashSetCreate() $/;"	f
+myHashSetFree	contains_duplicate.c	/^void myHashSetFree(MyHashSet* obj) $/;"	f
+myHashSetFree	contains_duplicate.method.1.c	/^void myHashSetFree(MyHashSet* obj) $/;"	f
+myHashSetFree	happy_number.hashset.c	/^void myHashSetFree(MyHashSet* obj) $/;"	f
+myHashSetFree	hashset.list-bucket.c	/^void myHashSetFree(MyHashSet* obj) $/;"	f
+myHashSetFree	hashset_basic.c	/^void myHashSetFree(MyHashSet* obj) $/;"	f
+myHashSetFree	hashset_list_bucket.c	/^void myHashSetFree(MyHashSet* obj) $/;"	f
+myHashSetFree	intersection_of_two_arrays.c	/^void myHashSetFree(MyHashSet* obj) $/;"	f
+myHashSetFree	single_number.method.0.array-bucket.c	/^void myHashSetFree(MyHashSet* obj) $/;"	f
+myHashSetFree	single_number.method.1.linked-list-bucket.c	/^void myHashSetFree(MyHashSet* obj) $/;"	f
+myHashSetFree	valid_sudoku.bashset-array-bucket.c	/^void myHashSetFree(MyHashSet* obj) $/;"	f
+myHashSetFun	contains_duplicate.method.1.c	/^int myHashSetFun(int key)$/;"	f
+myHashSetFun	hashset.list-bucket.c	/^int myHashSetFun(int key)$/;"	f
+myHashSetFun	hashset_list_bucket.c	/^int myHashSetFun(int key)$/;"	f
+myHashSetFun	single_number.method.1.linked-list-bucket.c	/^int myHashSetFun(int key)$/;"	f
+myHashSetRemove	contains_duplicate.c	/^void myHashSetRemove(MyHashSet* obj, int key) $/;"	f
+myHashSetRemove	contains_duplicate.method.1.c	/^void myHashSetRemove(MyHashSet* obj, int key) $/;"	f
+myHashSetRemove	happy_number.hashset.c	/^void myHashSetRemove(MyHashSet* obj, int key) $/;"	f
+myHashSetRemove	hashset.list-bucket.c	/^void myHashSetRemove(MyHashSet* obj, int key) $/;"	f
+myHashSetRemove	hashset_basic.c	/^void myHashSetRemove(MyHashSet* obj, int key) $/;"	f
+myHashSetRemove	hashset_list_bucket.c	/^void myHashSetRemove(MyHashSet* obj, int key) $/;"	f
+myHashSetRemove	intersection_of_two_arrays.c	/^void myHashSetRemove(MyHashSet* obj, int key) $/;"	f
+myHashSetRemove	single_number.method.0.array-bucket.c	/^void myHashSetRemove(MyHashSet* obj, int key) $/;"	f
+myHashSetRemove	single_number.method.1.linked-list-bucket.c	/^void myHashSetRemove(MyHashSet* obj, int key) $/;"	f
+myLinkedListAddAtTail	contains_duplicate.method.1.c	/^void myLinkedListAddAtTail(MyLinkedList* obj, int val) {$/;"	f
+myLinkedListAddAtTail	contains_duplicate_ii.hashmap-list-bucket.c	/^void myLinkedListAddAtTail(MyLinkedList* obj, int key, int val) $/;"	f
+myLinkedListAddAtTail	find_duplicate_subtrees.c	/^void myLinkedListAddAtTail(MyLinkedList* obj, struct TreeNode* root, char* stree) $/;"	f
+myLinkedListAddAtTail	find_duplicate_subtrees.optimized.c	/^void myLinkedListAddAtTail(MyLinkedList* obj, struct TreeNode* root, char* stree) $/;"	f
+myLinkedListAddAtTail	group_anagrams.hasmap-array-bucket.c	/^int myLinkedListAddAtTail(MyLinkedList* obj, char* val) $/;"	f
+myLinkedListAddAtTail	hashmap.list-bucket.c	/^void myLinkedListAddAtTail(MyLinkedList* obj, int key, int val) $/;"	f
+myLinkedListAddAtTail	hashset.list-bucket.c	/^void myLinkedListAddAtTail(MyLinkedList* obj, int val) {$/;"	f
+myLinkedListAddAtTail	hashset_list_bucket.c	/^void myLinkedListAddAtTail(MyLinkedList* obj, int val) {$/;"	f
+myLinkedListAddAtTail	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^void myLinkedListAddAtTail(MyLinkedList* obj, char* key, int val) {$/;"	f
+myLinkedListAddAtTail	single_number.method.1.linked-list-bucket.c	/^void myLinkedListAddAtTail(MyLinkedList* obj, int val) {$/;"	f
+myLinkedListAddAtTail	two_sum.hashmap-list-bucket.c	/^void myLinkedListAddAtTail(MyLinkedList* obj, int key, int val) {$/;"	f
+myLinkedListAddKey	group_anagrams.hasmap-array-bucket.c	/^int myLinkedListAddKey(MyLinkedList* obj, char* key) $/;"	f
+myLinkedListContain	contains_duplicate.method.1.c	/^int myLinkedListContain(MyLinkedList* obj, int value)$/;"	f
+myLinkedListContain	contains_duplicate_ii.hashmap-list-bucket.c	/^int myLinkedListContain(MyLinkedList* obj, int key)$/;"	f
+myLinkedListContain	find_duplicate_subtrees.c	/^struct TreeNode* myLinkedListContain(MyLinkedList* obj, struct TreeNode* root, char* stree, int* checked)$/;"	f
+myLinkedListContain	find_duplicate_subtrees.optimized.c	/^struct TreeNode* myLinkedListContain(MyLinkedList* obj, struct TreeNode* root, char* stree, int* checked)$/;"	f
+myLinkedListContain	group_anagrams.hasmap-array-bucket.c	/^int myLinkedListContain(MyLinkedList* obj, char* val)$/;"	f
+myLinkedListContain	hashmap.list-bucket.c	/^int myLinkedListContain(MyLinkedList* obj, int key)$/;"	f
+myLinkedListContain	hashset.list-bucket.c	/^int myLinkedListContain(MyLinkedList* obj, int value)$/;"	f
+myLinkedListContain	hashset_list_bucket.c	/^int myLinkedListContain(MyLinkedList* obj, int value)$/;"	f
+myLinkedListContain	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^int myLinkedListContain(MyLinkedList* obj, char* key)$/;"	f
+myLinkedListContain	single_number.method.1.linked-list-bucket.c	/^int myLinkedListContain(MyLinkedList* obj, int value)$/;"	f
+myLinkedListContain	two_sum.hashmap-list-bucket.c	/^int myLinkedListContain(MyLinkedList* obj, int key)$/;"	f
+myLinkedListCreate	contains_duplicate.method.1.c	/^MyLinkedList* myLinkedListCreate() {$/;"	f
+myLinkedListCreate	contains_duplicate_ii.hashmap-list-bucket.c	/^MyLinkedList* myLinkedListCreate() {$/;"	f
+myLinkedListCreate	find_duplicate_subtrees.c	/^MyLinkedList* myLinkedListCreate(int size) $/;"	f
+myLinkedListCreate	find_duplicate_subtrees.optimized.c	/^MyLinkedList* myLinkedListCreate(int size) $/;"	f
+myLinkedListCreate	group_anagrams.hasmap-array-bucket.c	/^MyLinkedList* myLinkedListCreate(int size) $/;"	f
+myLinkedListCreate	hashmap.list-bucket.c	/^MyLinkedList* myLinkedListCreate() {$/;"	f
+myLinkedListCreate	hashset.list-bucket.c	/^MyLinkedList* myLinkedListCreate() {$/;"	f
+myLinkedListCreate	hashset_list_bucket.c	/^MyLinkedList* myLinkedListCreate() {$/;"	f
+myLinkedListCreate	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^MyLinkedList* myLinkedListCreate() {$/;"	f
+myLinkedListCreate	single_number.method.1.linked-list-bucket.c	/^MyLinkedList* myLinkedListCreate() {$/;"	f
+myLinkedListCreate	two_sum.hashmap-list-bucket.c	/^MyLinkedList* myLinkedListCreate() {$/;"	f
+myLinkedListDeleteAtIndex	contains_duplicate.method.1.c	/^void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {$/;"	f
+myLinkedListDeleteAtIndex	contains_duplicate_ii.hashmap-list-bucket.c	/^void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {$/;"	f
+myLinkedListDeleteAtIndex	hashmap.list-bucket.c	/^void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {$/;"	f
+myLinkedListDeleteAtIndex	hashset.list-bucket.c	/^void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {$/;"	f
+myLinkedListDeleteAtIndex	hashset_list_bucket.c	/^void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {$/;"	f
+myLinkedListDeleteAtIndex	single_number.method.1.linked-list-bucket.c	/^void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {$/;"	f
+myLinkedListDeleteAtIndex	two_sum.hashmap-list-bucket.c	/^void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {$/;"	f
+myLinkedListFree	contains_duplicate.method.1.c	/^void myLinkedListFree(MyLinkedList* obj) {$/;"	f
+myLinkedListFree	contains_duplicate_ii.hashmap-list-bucket.c	/^void myLinkedListFree(MyLinkedList* obj) {$/;"	f
+myLinkedListFree	find_duplicate_subtrees.c	/^void myLinkedListFree(MyLinkedList* obj) {$/;"	f
+myLinkedListFree	find_duplicate_subtrees.optimized.c	/^void myLinkedListFree(MyLinkedList* obj) {$/;"	f
+myLinkedListFree	group_anagrams.hasmap-array-bucket.c	/^void myLinkedListFree(MyLinkedList* obj) {$/;"	f
+myLinkedListFree	hashmap.list-bucket.c	/^void myLinkedListFree(MyLinkedList* obj) {$/;"	f
+myLinkedListFree	hashset.list-bucket.c	/^void myLinkedListFree(MyLinkedList* obj) {$/;"	f
+myLinkedListFree	hashset_list_bucket.c	/^void myLinkedListFree(MyLinkedList* obj) {$/;"	f
+myLinkedListFree	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^void myLinkedListFree(MyLinkedList* obj) {$/;"	f
+myLinkedListFree	single_number.method.1.linked-list-bucket.c	/^void myLinkedListFree(MyLinkedList* obj) {$/;"	f
+myLinkedListFree	two_sum.hashmap-list-bucket.c	/^void myLinkedListFree(MyLinkedList* obj) {$/;"	f
+myLinkedListGet	contains_duplicate.method.1.c	/^int myLinkedListGet(MyLinkedList* obj, int index) $/;"	f
+myLinkedListGet	contains_duplicate_ii.hashmap-list-bucket.c	/^int myLinkedListGet(MyLinkedList* obj, int index) $/;"	f
+myLinkedListGet	hashmap.list-bucket.c	/^int myLinkedListGet(MyLinkedList* obj, int index) $/;"	f
+myLinkedListGet	hashset.list-bucket.c	/^int myLinkedListGet(MyLinkedList* obj, int index) $/;"	f
+myLinkedListGet	hashset_list_bucket.c	/^int myLinkedListGet(MyLinkedList* obj, int index) $/;"	f
+myLinkedListGet	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^int myLinkedListGet(MyLinkedList* obj, int index) $/;"	f
+myLinkedListGet	single_number.method.1.linked-list-bucket.c	/^int myLinkedListGet(MyLinkedList* obj, int index) $/;"	f
+myLinkedListGet	two_sum.hashmap-list-bucket.c	/^int myLinkedListGet(MyLinkedList* obj, int index) $/;"	f
+myLinkedListGetVal	contains_duplicate_ii.hashmap-list-bucket.c	/^int myLinkedListGetVal(MyLinkedList* obj, int key)$/;"	f
+myLinkedListGetVal	hashmap.list-bucket.c	/^int myLinkedListGetVal(MyLinkedList* obj, int key)$/;"	f
+myLinkedListPrint	contains_duplicate.method.1.c	/^void myLinkedListPrint(MyLinkedList* obj)$/;"	f
+myLinkedListPrint	contains_duplicate_ii.hashmap-list-bucket.c	/^void myLinkedListPrint(MyLinkedList* obj)$/;"	f
+myLinkedListPrint	hashmap.list-bucket.c	/^void myLinkedListPrint(MyLinkedList* obj)$/;"	f
+myLinkedListPrint	hashset.list-bucket.c	/^void myLinkedListPrint(MyLinkedList* obj)$/;"	f
+myLinkedListPrint	hashset_list_bucket.c	/^void myLinkedListPrint(MyLinkedList* obj)$/;"	f
+myLinkedListPrint	single_number.method.1.linked-list-bucket.c	/^void myLinkedListPrint(MyLinkedList* obj)$/;"	f
+myLinkedListPrint	two_sum.hashmap-list-bucket.c	/^void myLinkedListPrint(MyLinkedList* obj)$/;"	f
+myLinkedListUpdate	contains_duplicate_ii.hashmap-list-bucket.c	/^void myLinkedListUpdate(MyLinkedList* obj, int key, int val)$/;"	f
+myLinkedListUpdate	hashmap.list-bucket.c	/^void myLinkedListUpdate(MyLinkedList* obj, int key, int val)$/;"	f
+new	find_duplicate_subtrees.c	/^static struct TreeNode** new;    $/;"	v	typeref:struct:TreeNode	file:
+new	find_duplicate_subtrees.optimized.c	/^static struct TreeNode** new;    $/;"	v	typeref:struct:TreeNode	file:
+next	contains_duplicate.method.1.c	/^    struct MyLinkedList* next;$/;"	m	struct:__anon4	typeref:struct:__anon4::MyLinkedList	file:
+next	contains_duplicate_ii.hashmap-list-bucket.c	/^    struct MyLinkedList* next;$/;"	m	struct:__anon2	typeref:struct:__anon2::MyLinkedList	file:
+next	find_duplicate_subtrees.c	/^    struct MyLinkedList* next;$/;"	m	struct:__anon6	typeref:struct:__anon6::MyLinkedList	file:
+next	find_duplicate_subtrees.optimized.c	/^    struct MyLinkedList* next;$/;"	m	struct:__anon8	typeref:struct:__anon8::MyLinkedList	file:
+next	group_anagrams.hasmap-array-bucket.c	/^    struct MyLinkedList* next;$/;"	m	struct:__anon12	typeref:struct:__anon12::MyLinkedList	file:
+next	hashmap.list-bucket.c	/^    struct MyLinkedList* next;$/;"	m	struct:__anon16	typeref:struct:__anon16::MyLinkedList	file:
+next	hashset.list-bucket.c	/^    struct MyLinkedList* next;$/;"	m	struct:__anon21	typeref:struct:__anon21::MyLinkedList	file:
+next	hashset_list_bucket.c	/^    struct MyLinkedList* next;$/;"	m	struct:__anon19	typeref:struct:__anon19::MyLinkedList	file:
+next	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^    struct MyLinkedList* next;$/;"	m	struct:__anon26	typeref:struct:__anon26::MyLinkedList	file:
+next	single_number.method.1.linked-list-bucket.c	/^    struct MyLinkedList* next;$/;"	m	struct:__anon29	typeref:struct:__anon29::MyLinkedList	file:
+next	two_sum.hashmap-list-bucket.c	/^    struct MyLinkedList* next;$/;"	m	struct:__anon32	typeref:struct:__anon32::MyLinkedList	file:
+numSquareNum	happy_number.hashset.c	/^int numSquareNum(int n)$/;"	f
+printKey	group_anagrams.hasmap-array-bucket.c	/^void printKey(char* key)$/;"	f
+printTreeToString	find_duplicate_subtrees.c	/^int printTreeToString(struct TreeNode* root, char* stree)$/;"	f
+printTreeToString	find_duplicate_subtrees.optimized.c	/^int printTreeToString(struct TreeNode* root, char* stree)$/;"	f
+ptr	first_unique_character_in_a_string.hashmap-array-bucket.c	/^    int* ptr;$/;"	m	struct:__anon10	file:
+ptr	group_anagrams.hasmap-array-bucket.c	/^    int* ptr;$/;"	m	struct:__anon11	file:
+ptr	hashmap_basic.c	/^    int* ptr;$/;"	m	struct:__anon15	file:
+ptr	intersection_of_two_arrays_ii.hashmap-array-bucket.c	/^    int* ptr;$/;"	m	struct:__anon24	file:
+ptr	isomorphic_strings.hashmap-array-bucket.c	/^    int* ptr;$/;"	m	struct:__anon25	file:
+ptr	two_sum.hashmap_array_bucket.c	/^    int* ptr;$/;"	m	struct:__anon31	file:
+right	find_duplicate_subtrees.optimized.c	/^    struct StringTreeNode *right;$/;"	m	struct:StringTreeNode	typeref:struct:StringTreeNode::StringTreeNode	file:
+searchTree	find_duplicate_subtrees.c	/^int searchTree(TreeHashSet* obj, struct TreeNode* root, int pre_count)$/;"	f
+searchTree	find_duplicate_subtrees.optimized.c	/^int searchTree(TreeHashSet* obj, struct StringTreeNode* root, int pre_count)$/;"	f
+singleNumber	single_number.method.0.array-bucket.c	/^int singleNumber(int* nums, int numsSize)$/;"	f
+singleNumber	single_number.method.1.linked-list-bucket.c	/^int singleNumber(int* nums, int numsSize)$/;"	f
+stree	find_duplicate_subtrees.optimized.c	/^    char *stree;$/;"	m	struct:StringTreeNode	file:
+stringTreeNodeCreate	find_duplicate_subtrees.optimized.c	/^struct StringTreeNode* stringTreeNodeCreate()$/;"	f
+treeHashSetAdd	find_duplicate_subtrees.c	/^void treeHashSetAdd(TreeHashSet* obj, struct TreeNode* root, char* stree) $/;"	f
+treeHashSetAdd	find_duplicate_subtrees.optimized.c	/^void treeHashSetAdd(TreeHashSet* obj, struct TreeNode* root, char* stree) $/;"	f
+treeHashSetContain	find_duplicate_subtrees.c	/^struct TreeNode* treeHashSetContain(TreeHashSet* obj, struct TreeNode* root, char* stree, int* checked)$/;"	f
+treeHashSetContain	find_duplicate_subtrees.optimized.c	/^struct TreeNode* treeHashSetContain(TreeHashSet* obj, struct TreeNode* root, char* stree, int* checked)$/;"	f
+treeHashSetCreate	find_duplicate_subtrees.c	/^TreeHashSet* treeHashSetCreate() $/;"	f
+treeHashSetCreate	find_duplicate_subtrees.optimized.c	/^TreeHashSet* treeHashSetCreate() $/;"	f
+treeHashSetFree	find_duplicate_subtrees.c	/^void treeHashSetFree(TreeHashSet* obj) $/;"	f
+treeHashSetFree	find_duplicate_subtrees.optimized.c	/^void treeHashSetFree(TreeHashSet* obj) $/;"	f
+tree_ptr	find_duplicate_subtrees.c	/^    struct TreeNode* tree_ptr;$/;"	m	struct:__anon6	typeref:struct:__anon6::TreeNode	file:
+tree_ptr	find_duplicate_subtrees.optimized.c	/^    struct TreeNode* tree_ptr;$/;"	m	struct:__anon8	typeref:struct:__anon8::TreeNode	file:
+twoSum	two_sum.hashmap-list-bucket.c	/^int* twoSum(int* nums, int numsSize, int target, int* returnSize)$/;"	f
+twoSum	two_sum.hashmap_array_bucket.c	/^int* twoSum(int* nums, int numsSize, int target, int* returnSize)$/;"	f
+val	contains_duplicate.method.1.c	/^    int val;$/;"	m	struct:__anon4	file:
+val	contains_duplicate_ii.hashmap-list-bucket.c	/^    int val;$/;"	m	struct:__anon2	file:
+val	find_duplicate_subtrees.c	/^    char* val;$/;"	m	struct:__anon6	file:
+val	find_duplicate_subtrees.optimized.c	/^    char* val;$/;"	m	struct:__anon8	file:
+val	find_duplicate_subtrees.optimized.c	/^    int val;$/;"	m	struct:StringTreeNode	file:
+val	group_anagrams.hasmap-array-bucket.c	/^    char* val;$/;"	m	struct:__anon12	file:
+val	hashmap.list-bucket.c	/^    int val;$/;"	m	struct:__anon16	file:
+val	hashset.list-bucket.c	/^    int val;$/;"	m	struct:__anon21	file:
+val	hashset_list_bucket.c	/^    int val;$/;"	m	struct:__anon19	file:
+val	minimum_index_sum_of_two_lists.hashmap.list-bucket.c	/^    int val;$/;"	m	struct:__anon26	file:
+val	single_number.method.1.linked-list-bucket.c	/^    int val;$/;"	m	struct:__anon29	file:
+val	two_sum.hashmap-list-bucket.c	/^    int val;$/;"	m	struct:__anon32	file:

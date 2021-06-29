@@ -31,22 +31,21 @@ MyLinkedList* myLinkedListCreate(int size)
 int printTreeToString(struct TreeNode* root, char* stree)
 {
     int count = 0;
-    
-    printf("%s-[stree=0x%x]-%d-%d\n", __func__, stree, root->val);
-    sprintf(stree + count, "%04d", root->val);
-    count += 4;
+
+    sprintf(stree, "%04d", root->val);
+    count = 4;
     if(root->left)
-        count += printTreeToString(root->left, stree + count);
+        count += printTreeToString(root->left, stree  + count);
     else
     {
-        sprintf(stree + count, "%c", 'n');
+        sprintf(stree + 4, "%c", 'n');
         count++;
     }
     if(root->right)
         printTreeToString(root->left, stree + count);
     else
     {
-        sprintf(stree + count, "%c", 'n');
+        sprintf(stree + 4, "%c", 'n');
         count++;
     }
     printf("[%d]-%s\n", count, stree);
@@ -60,13 +59,11 @@ void myLinkedListAddAtTail(MyLinkedList* obj, struct TreeNode* root)
     //printf("%s:0x%x\n", __func__, obj);
     MyLinkedList* end = NULL;
     MyLinkedList* ptr = NULL;
-    int len = 0;
     
     if(obj && obj->val[0] != INIT_NUM)
     {
         end = myLinkedListCreate(STRING_SIZE);
         end->len = printTreeToString(root, end->val); 
-        printf("not root:%s\n", end->val); 
         end->tree_ptr = root;
         ptr = obj;
         while(ptr->next)
@@ -79,7 +76,6 @@ void myLinkedListAddAtTail(MyLinkedList* obj, struct TreeNode* root)
     {
         //printf("copy... %d:%d\n", strlen(obj->val), strlen(val));
         obj->len = printTreeToString(root, obj->val); 
-        printf("root:%s\n", obj->val); 
         obj->tree_ptr = root;
     }
 }
@@ -236,4 +232,3 @@ struct TreeNode** findDuplicateSubtrees(struct TreeNode* root, int* returnSize)
 
 
 /* 114-1288(n/a)-321.8 , on Jun 19, 2021 */
-

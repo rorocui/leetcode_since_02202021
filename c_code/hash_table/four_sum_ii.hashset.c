@@ -1,6 +1,6 @@
 #define SIZE        0x4000
 #define BUCKET_SIZE 0x8000
-#define DELTA       0x10000000
+#define DELTA       0x10000000     
 #define MAX_INT_32  0x7FFFFFFF 
 
 typedef struct {
@@ -40,6 +40,7 @@ void myLinkedListAddAtTail(MyLinkedList* obj, int val) {
         obj->val = val;
 
     }
+    //if(val == 14498) {printf("after:\n"); myLinkedListPrint(obj);}
 }
 
 /** Delete the index-th node in the linked list, if the index is valid. */
@@ -48,8 +49,6 @@ void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
     MyLinkedList* temp = NULL;
     int i;
 
-    //if(obj == 0x6020000ee4b0) printf("%s:0x%x:%d\n", __func__, obj, index);
-    //if(obj == 0x6020000ee4b0) myLinkedListPrint(obj);
     if(obj)
     {
         if(index > 0)
@@ -97,17 +96,15 @@ void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
 int myLinkedListContain(MyLinkedList* obj, int value)
 {
     //if(value == 14498) printf("%s:0x%lx:%d\n", __func__, obj, value);
+    //printf("%s:0x%lx:%d\n", __func__, obj, value);
     MyLinkedList* ptr = obj;
     int index = 0;
-    //if(value == 14498) myLinkedListPrint(obj);
 
-    //if(value == 14498) printf("%d\n", ptr->val);
     if(ptr->val == value) return index;
     while(ptr->next)
     {
         ptr = ptr->next;
         index++;
-        //printf("%d,index=%d\n", ptr->val, index);
         if(ptr->val == value) return index;
     }
     return -1;
@@ -120,7 +117,6 @@ int myLinkedListGet(MyLinkedList* obj, int index)
     MyLinkedList* ptr = NULL;
     int i;
 
-    //printf("%s:0x%x\n", __func__, obj);
     if(obj)
         ptr = obj;
     else
@@ -135,7 +131,6 @@ int myLinkedListGet(MyLinkedList* obj, int index)
         else
             break;
     }
-    //printf("%s:0x%x\n", __func__, obj);
     if(i == index && ptr)
     {
         //printf("%s:%d\n", __func__, ptr->val);
@@ -178,10 +173,8 @@ typedef struct
     MyLinkedList** arr;
 } MyHashSet;
 
-
 MyHashSet* myHashSetCreate() 
 {
-    //printf("%s\n", __FUNCTION__);
     MyHashSet* obj = malloc(sizeof(MyHashSet));
     int j; 
 
@@ -195,21 +188,26 @@ MyHashSet* myHashSetCreate()
 
 int myHashSetFun(int key)
 {
-    return (key + DELTA) % BUCKET_SIZE;
+    return (key  + DELTA) / BUCKET_SIZE;
 }
 
 bool myHashSetContains(MyHashSet* obj, int key) 
 {
-    //printf("%s:%d\n", __func__, key);
-    if(myLinkedListContain(obj->arr[myHashSetFun(key)], key) == -1) return false;
-    else    return true;
+    printf("%s:%d\n", __func__, key);
+    if(myLinkedListContain(obj->arr[myHashSetFun(key)], key) == -1) 
+    {
+        return false;
+    }
+    else 
+    {
+        return true;
+    }
 }
 
 void myHashSetAdd(MyHashSet* obj, int key) 
 {
-    //printf("%s:%d\n", __func__, key);
-    if(!myHashSetContains(obj, key))
-        myLinkedListAddAtTail(obj->arr[myHashSetFun(key)], key);
+    printf("%s:%d\n", __func__, key);
+    myLinkedListAddAtTail(obj->arr[myHashSetFun(key)], key);
 }
 
 void myHashSetRemove(MyHashSet* obj, int key) 
@@ -233,5 +231,30 @@ void myHashSetFree(MyHashSet* obj)
 	if(obj->arr) free(obj->arr);
     if(obj) free(obj);
 } 
+
+int fourSumCount(int* nums1, int nums1Size, int* nums2, int nums2Size, int* nums3, int nums3Size, int* nums4, int nums4Size)
+{
+    int i, j;
+    int ret = 0;
+    MyHashSet * hash_set = NULL;
+
+
+    hash_set = myHashSetCreate();
+    //printf("%#x,%#x\n", hash_set, hash_set->arr[0x1fff]);
+    for(i = 0; i < nums1Size; i++)
+        for(j = 0; j < nums2Size; j++)
+    {
+        myHashSetAdd(hash_set, (nums1[i] + nums2[j]));
+    }
+    for(i = 0; i < nums3Size; i++)
+        for(j = 0; j < nums4Size; j++)
+    {
+        if(myHashSetContains(hash_set, (-1 *(nums3[i] + nums4[j]))))
+            ret++;
+    }
+
+    myHashSetFree(hash_set);
+    return ret;
+}
 
 /* 32-164(<13%)-28.5, on Jun 2nd, 2021 */

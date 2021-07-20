@@ -34,23 +34,22 @@ void myLinkedListAddAtTail(MyLinkedList* obj, int key, int val)
     MyLinkedList* ptr = NULL;
 
     
-    if(obj && obj->val != MIN_INT_32)
+    if(obj && obj->key != MIN_INT_32)
     {
         end = myLinkedListCreate();
+        end->val = val;
+        end->key = key;
         ptr = obj;
         while(ptr->next)
         {
             ptr = ptr->next;
         }
-        ptr->val = val;
-        ptr->key = key;
         ptr->next = end;
     }
     else
     {
         obj->val = val;
         obj->key = key;
-
     }
 }
 

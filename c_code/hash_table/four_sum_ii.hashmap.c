@@ -1,6 +1,4 @@
-#define SIZE            0x8000
-#define DELTA           0x20000000
-#define BUCKET_SIZE     0x8000
+#define SIZE            128
 #define ERROR_CODE      -1
 #define MIN_INT_32      0x80000000
 #define MAX_INT_32      0x7FFFFFFF
@@ -148,7 +146,7 @@ MyHashMap* myHashMapCreate()
 
 int myHashMapFun(int key)
 {
-    return (key + DELTA) % BUCKET_SIZE;
+    return abs(key) % SIZE;
 }
 
 void myHashMapPut(MyHashMap* obj, int key) 
@@ -209,3 +207,4 @@ int fourSumCount(int* nums1, int nums1Size, int* nums2, int nums2Size, int* nums
 
 /* 132-1680(n/a)-237.7, on July 19th, 2021 */
 /* mod fun  132-716ms(n/a)-236, on July 19th, 2021*/
+/* SIZE=128 132-84ms(n/a)-8.5MB, on July 26th, 2021*/

@@ -1,6 +1,4 @@
-#define SIZE 100001
-#define DELTA 1000000000
-#define BUCKET_SIZE 10000
+#define SIZE 128
 #define ERROR_CODE 0xFFFFFFFF
 #define MIN_INT_32 0xFFFFFFFF
 
@@ -186,7 +184,7 @@ MyHashMap* myHashMapCreate()
     int j; 
 
     obj->arr = malloc(sizeof(MyLinkedList*) * SIZE);
-    for(j = 0; j < BUCKET_SIZE; j++)    
+    for(j = 0; j < SIZE; j++)    
     {
         obj->arr[j] = myLinkedListCreate();
     }
@@ -195,7 +193,7 @@ MyHashMap* myHashMapCreate()
 
 int myHashMapFun(int key)
 {
-    return (key + DELTA) % BUCKET_SIZE;
+    return abs(key) % SIZE;
 }
 
 void myHashMapPut(MyHashMap* obj, int key, int val) 
@@ -235,7 +233,7 @@ void myHashMapFree(MyHashMap* obj)
     //printf("%s\n", __func__);
     int i;
 
-    for(i = 0; i < BUCKET_SIZE; i++)
+    for(i = 0; i < SIZE; i++)
 	    if(obj->arr[i]) myLinkedListFree(obj->arr[i]);
 
 	if(obj->arr) free(obj->arr);
@@ -275,3 +273,4 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 
 
 /* 54-92(<17%)-40.8, on Jun 5nd, 2021 */
+/* SIZE=128, 54-16(<88%)-7.3, on July 27th, 2021 */

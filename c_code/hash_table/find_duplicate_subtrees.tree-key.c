@@ -229,4 +229,4 @@ struct TreeNode** findDuplicateSubtrees(struct TreeNode* root, int* returnSize)
 }
 
 /* 175-300(n/a)-160.4 , on July 15th, 2021 */
-/* 175-20(n/a)-37.2, on July 27th, 2021 */
+/* SIZE=128, 175-20(n/a)-37.2, on July 27th, 2021 */

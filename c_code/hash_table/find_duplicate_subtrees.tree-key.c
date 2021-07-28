@@ -6,8 +6,7 @@
  *     struct TreeNode *right;
  * };
  */
-#define SIZE          100000000
-#define BUCKET_SIZE   10000
+#define SIZE          128
 #define DELTA         200  
 #define MIN_INT_32    0x80000000
 #define MIN_INT_64    0x8000000000000000
@@ -129,8 +128,8 @@ MyHashMap* myHashMapCreate()
     MyHashMap* obj = malloc(sizeof(MyHashMap));
     int j; 
 
-    obj->arr = malloc(sizeof(MyLinkedList*) * SIZE / BUCKET_SIZE);
-    for(j = 0; j < (SIZE / BUCKET_SIZE); j++)    
+    obj->arr = malloc(sizeof(MyLinkedList*) * SIZE);
+    for(j = 0; j < SIZE; j++)    
     {
         obj->arr[j] = myLinkedListCreate();
     }
@@ -139,7 +138,7 @@ MyHashMap* myHashMapCreate()
 
 int myHashMapFun(long key)
 {
-    return key % BUCKET_SIZE;
+    return key % SIZE;
 }
 
 void myHashMapPut(MyHashMap* obj, long key, int id) 
@@ -158,7 +157,7 @@ void myHashMapFree(MyHashMap* obj)
     //printf("%s\n", __func__);
     int i;
 
-    for(i = 0; i < (SIZE / BUCKET_SIZE); i++)
+    for(i = 0; i < SIZE; i++)
 	    if(obj->arr[i]) myLinkedListFree(obj->arr[i]);
 
 	if(obj->arr) free(obj->arr);
@@ -230,3 +229,4 @@ struct TreeNode** findDuplicateSubtrees(struct TreeNode* root, int* returnSize)
 }
 
 /* 175-300(n/a)-160.4 , on July 15th, 2021 */
+/* 175-20(n/a)-37.2, on July 27th, 2021 */

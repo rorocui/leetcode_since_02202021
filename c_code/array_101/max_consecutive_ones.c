@@ -13,3 +13,4 @@ int findMaxConsecutiveOnes(int* nums, int numsSize){
     if(counter > max) max = counter;
     return max;
 }
+/* 42 - 44(<20%) - 7.5MB , on Aug 21th, 2021 */

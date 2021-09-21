@@ -34,8 +34,7 @@ void quicksort(int* arr, int low, int high)
     }
 }
 
-int heightChecker(int* heights, int heightsSize)
-{
+int heightChecker(int* heights, int heightsSize){
      int i, ret = 0;
          
      int* new_arr = malloc(sizeof(int) * heightsSize);
@@ -62,7 +61,8 @@ int heightChecker(int* heights, int heightsSize)
      if(new_arr != NULL) free(new_arr);
      
      return ret;
-    /* 81 cases in 4ms on Feb 28th, 2021 */
  
 }
+/* 80 cases in 4ms on Feb 28th, 2021 */
+/* 80 - 0(<100%) - 5.7MB, on Sep 19th, 2021 */
 

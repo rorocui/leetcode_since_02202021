@@ -106,5 +106,6 @@ int thirdMax(int* nums, int numsSize)
         return max3;
     else
         return max1;
-    /* 27 cases in 4 ms, beats 94.27% on March 1st, 2021 */
 }
+/* 27 cases in 4 ms, beats 94.27% on March 1st, 2021 */
+/* 31 - 9(<21%) - 6.3MB, on Sep 19th, 2021*/

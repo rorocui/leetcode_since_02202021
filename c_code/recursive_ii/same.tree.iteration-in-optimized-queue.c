@@ -1,11 +1,20 @@
-typedef struct {
+typedef struct 
+{
     struct TreeNode* node;
     struct MyLinkedList* next;
 } MyLinkedList;
 
+typedef struct 
+{
+    MyLinkedList* que;
+    int  currentSize;
+} MyCQue;
+
+
 /** Initialize your data structure here. */
 
-MyLinkedList* myLinkedListCreate() {
+MyLinkedList* myLinkedListCreate() 
+{
     //printf("%s\n", __FUNCTION__);
     MyLinkedList* new = NULL;
     new = (MyLinkedList*)malloc(sizeof(MyLinkedList));
@@ -15,7 +24,8 @@ MyLinkedList* myLinkedListCreate() {
 }
 
 /** Append a node of value val to the last element of the linked list. */
-void myLinkedListAddAtTail(MyLinkedList* obj, struct TreeNode* node) {
+void myLinkedListAddAtTail(MyLinkedList* obj, struct TreeNode* node) 
+{
     MyLinkedList* end = NULL;
     MyLinkedList* ptr = NULL;
 
@@ -38,82 +48,6 @@ void myLinkedListAddAtTail(MyLinkedList* obj, struct TreeNode* node) {
     }
 }
 
-/** Delete the index-th node in the linked list, if the index is valid. */
-void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
-    MyLinkedList* ptr = NULL;
-    MyLinkedList* temp = NULL;
-    int i;
-
-    //printf("%s:%d\n", __func__, val);
-    if(obj)
-    {
-        if(index > 0)
-        {
-            ptr = obj;
-            for(i = 0; i < index - 1;)
-            {
-                if(ptr->next)
-                {
-                    ptr = ptr->next;
-                    i++;
-                }
-                else
-                    break;
-            }
-            if(i == index - 1)
-            {
-                if(ptr->next)
-                {
-                    temp = ptr->next;
-                    ptr->next = temp->next;
-                }
-                free(temp);
-            }
-        }
-        else
-        {
-            ptr = obj->next;
-            obj->next = ptr->next;
-            obj->node = ptr->node;
-            free(ptr);
-        }
-    }
-
-}
-
-/** Get the value of the index-th node in the linked list.
- * If the index is invalid, return -1. */
-struct TreeNode* myLinkedListGet(MyLinkedList* obj, int index) {
-    MyLinkedList* ptr = NULL;
-    int i;
-
-    //printf("%s:0x%x\n", __func__, obj);
-    if(obj)
-        ptr = obj;
-    else
-        return NULL;
-    for(i = 0; i < index;)
-    {
-        if(ptr->next)
-        {
-            ptr = ptr->next;
-            i++;
-        }
-        else
-            break;
-    }
-    //printf("%s:0x%x\n", __func__, obj);
-    if(i == index && ptr)
-    {
-        //printf("%s:%d\n", __func__, ptr->val);
-        return ptr->node;
-    }
-    else
-    {
-        return NULL;
-    }
-}
-
 void myLinkedListFree(MyLinkedList* obj) {
     MyLinkedList* ptr = NULL;
 
@@ -128,13 +62,25 @@ void myLinkedListFree(MyLinkedList* obj) {
 
 }
 
-typedef struct {
-    MyLinkedList* que;
-    int  currentSize;
-} MyCQue;
+/** Remove top of linked list and return it **/
+struct TreeNode* myLinkedListGetTop(MyLinkedList* obj) 
+{
+    MyLinkedList* ptr = NULL;
+    struct TreeNode* ret = NULL;
+
+    if(! obj) return NULL;
+    ptr = obj->next;
+    obj->next = ptr->next;
+    ret = obj->node;
+    obj->node = ptr->node;
+
+    if(ptr) free(ptr);
+    return ret;
+}
 
 
-MyCQue* myCQueCreate() {
+MyCQue* myCQueCreate() 
+{
     MyCQue* obj = (MyCQue*)malloc(sizeof(MyCQue));
     obj->que = myLinkedListCreate();
     obj->currentSize = 0;
@@ -142,21 +88,22 @@ MyCQue* myCQueCreate() {
     return obj;
 }
 
-bool myCQueEnQue(MyCQue* obj, struct TreeNode* node) {
+bool myCQueEnQue(MyCQue* obj, struct TreeNode* node) 
+{
     //printf("EnQue-%#x\n", node);
     myLinkedListAddAtTail(obj->que, node);
     obj->currentSize++;
     return true;
 }
 
-struct TreeNode* myCQueDeQue(MyCQue* obj) {
+struct TreeNode* myCQueDeQue(MyCQue* obj) 
+{
     struct TreeNode*  ret = NULL;
 
     if(obj->currentSize > 0)
     {
         obj->currentSize--;
-        ret = myLinkedListGet(obj->que, 0);
-        myLinkedListDeleteAtIndex(obj->que, 0);
+        ret = myLinkedListGetTop(obj->que);
         //printf("DeQue-%d\n", ret);
         return ret;
     }
@@ -179,7 +126,6 @@ void myCQueFree(MyCQue* obj) {
     if(obj->que) myLinkedListFree(obj->que);
     if(obj) free(obj);
 }
-
 
 /**
  * Definition for a binary tree node.
@@ -230,5 +176,5 @@ bool isSameTree(struct TreeNode* p, struct TreeNode* q)
 
     return true;
 }
-/* 60 - 0 (<100%) - 6.1MB, on Nov 3rd, 2021 */
 /* 60 - 0 (<100%) - 5.8MB, on Nov 4th, 2021 */
+

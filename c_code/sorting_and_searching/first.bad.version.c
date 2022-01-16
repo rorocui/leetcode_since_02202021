@@ -1,7 +1,5 @@
 // The API isBadVersion is defined for you.
 // bool isBadVersion(int version);
-
-
 int firstBadVersion(int n) 
 {
     int bad;
@@ -14,6 +12,7 @@ int firstBadVersion(int n)
     {
         //printf("bad=%d,%d\n", bad, isBadVersion(bad));
         if(isBadVersion(bad))
+        {
             if(isBadVersion(bad - 1))
             {
                 max = bad;
@@ -21,7 +20,9 @@ int firstBadVersion(int n)
             }
             else
                 return bad;
+        }
         else
+        {
             if(isBadVersion(bad + 1))
                 return bad + 1;
             else
@@ -29,9 +30,11 @@ int firstBadVersion(int n)
                 min = bad;
                 bad = (int)((min + max) / 2);
             }
+        }
     }
     return bad;
 
 }
 /* 22 - 3(<18%) - 5.5MB, on Oct 14th, 2021 */
+/* 22 - 0(<100%) - 5.6MB, on Jan 15th, 2022 */
 
